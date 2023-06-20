@@ -168,7 +168,7 @@ contract NounsDAOLogicV1Fork is UUPSUpgradeable, ReentrancyGuardUpgradeable, Nou
         uint256 quorumVotesBPS_,
         address[] memory erc20TokensToIncludeInQuit_,
         uint256 delayedGovernanceExpirationTimestamp_
-    ) public virtual {
+    ) public virtual initializer {
         __ReentrancyGuard_init_unchained();
         require(address(timelock) == address(0), 'NounsDAO::initialize: can only initialize once');
         require(timelock_ != address(0), 'NounsDAO::initialize: invalid timelock address');

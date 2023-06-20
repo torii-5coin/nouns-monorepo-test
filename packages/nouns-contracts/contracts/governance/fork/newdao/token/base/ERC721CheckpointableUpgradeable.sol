@@ -108,9 +108,10 @@ abstract contract ERC721CheckpointableUpgradeable is ERC721EnumerableUpgradeable
     function _beforeTokenTransfer(
         address from,
         address to,
-        uint256 tokenId
+        uint256 firstTokenId,
+        uint256 batchSize
     ) internal override {
-        super._beforeTokenTransfer(from, to, tokenId);
+        super._beforeTokenTransfer(from, to, firstTokenId, batchSize);
 
         /// @notice Differs from `_transferTokens()` to use `delegates` override method to simulate auto-delegation
         _moveDelegates(delegates(from), delegates(to), 1);
