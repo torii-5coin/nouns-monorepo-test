@@ -902,8 +902,8 @@ msgid "Note"
 msgstr ""
 
 #: src/pages/Governance/index.tsx
-msgid "Noun"
-msgstr "Noun"
+msgid "Ubuyama Noun"
+msgstr "Ubuyama Noun"
 
 #: src/components/Documentation/index.tsx
 msgid "Noun Seeder Contract"
@@ -938,8 +938,8 @@ msgstr "Nounderには、Nounsという形で報酬が与えられます (最初�
 #~ msgstr "Nounderへの報酬"
 
 #: src/pages/Governance/index.tsx
-msgid "Nouns"
-msgstr "Nouns"
+msgid "Ubuyama Nouns"
+msgstr "Ubuyama Nouns"
 
 #: src/components/NavBar/index.tsx
 msgid "Nouns & Traits"
@@ -952,8 +952,8 @@ msgstr "Nounsオークションハウス"
 #: src/components/Documentation/index.tsx
 #: src/components/NounderNounContent/index.tsx
 #: src/pages/Governance/index.tsx
-msgid "Nouns DAO"
-msgstr "Nouns DAO"
+msgid "Ubuyama Nouns DAO"
+msgstr "Ubuyama Nouns DAO"
 
 #: src/pages/Fork/index.tsx
 msgid "Nouns DAO Fork{0}"
@@ -988,8 +988,8 @@ msgid "Nouns artwork is in the {publicDomainLink}."
 msgstr "Nounsのアートワークは {publicDomainLink} にあります。"
 
 #: src/pages/Governance/index.tsx
-msgid "Nouns govern <0>Nouns DAO</0>. Nouns can vote on proposals or delegate their vote to a third party. A minimum of <1>{0}</1> is required to submit proposals."
-msgstr "Nounsは<0>Nouns DAO</0>を管理・運営します。Nounsは、提案に対し自ら投票、もしくは投票権を委任することができます。提案を行うには少なくとも<1>{0}</1>を所有している必要があります。"
+msgid "Ubuyama Nouns govern <0>Ubuyama Nouns DAO</0>. Ubuyama Nouns can vote on proposals or delegate their vote to a third party. A minimum of <1>{0}</1> is required to submit proposals."
+msgstr "Ubuyama Nounsは<0>Ubuyama Nouns DAO</0>を管理・運営します。Ubuyama Nounsは、提案に対し自ら投票、もしくは投票権を委任することができます。提案を行うには少なくとも<1>{0}</1>を所有している必要があります。"
 
 #: src/pages/Governance/index.tsx
 #~ msgid "Nouns govern <0>Nouns DAO</0>. Nouns can vote on proposals or delegate their vote to a third party. A minimum of <1>{nounsRequired} {0}</1> is required to submit proposals."
@@ -1575,8 +1575,8 @@ msgid "This transaction was automatically added to refill the TokenBuyer. Propos
 msgstr ""
 
 #: src/pages/Governance/index.tsx
-msgid "This treasury exists for <0>Nouns DAO</0> participants to allocate resources for the long-term growth and prosperity of the Nouns project."
-msgstr "このトレジャリーは、<0>Nouns DAO</0>の参加者がNounsプロジェクトの長期的な成長と繁栄目的に、リソースを配分するために存在しています。"
+msgid "This treasury exists for <0>Ubuyama Nouns DAO</0> participants to allocate resources for the long-term growth and prosperity of the Ubuyama Nouns project."
+msgstr "このトレジャリーは、<0>Ubuyama Nouns DAO</0>の参加者がUbuyama Nounsプロジェクトの長期的な成長と繁栄目的に、リソースを配分するために存在しています。"
 
 #: src/pages/EditCandidate/index.tsx
 msgid "This will clear all previous sponsors and feedback votes"
