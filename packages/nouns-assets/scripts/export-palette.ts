@@ -1,6 +1,6 @@
 import { promises as fs } from 'fs';
 import { palette } from '../src/image-data.json';
-import { ColorLib, Color } from "./lib/color";
+import { ColorArray, Color } from "./lib/color";
 
 /**
  * ドットエディタEDGEに読み込むためにテキスト出力するプログラム
@@ -13,8 +13,8 @@ const exportPalette = async (path: string) => {
       .filter(p => p!=='')
       .map(p => new Color('#' + p))
 
-  const sortedColors = new ColorLib(...colorElements)
-      .sortDefault()
+  const sortedColors = new ColorArray(...colorElements)
+      .sortDefault(10, true)
       .reverse()
 
   const output = sortedColors.map(p => {

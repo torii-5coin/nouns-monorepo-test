@@ -52,7 +52,7 @@ export class Color {
         const chr = max - min;
         let hue = 0;
         const val = Math.round(max / 255 * 100);
-        let sat = 0;
+        let sat: number;
 
         if (max === min || max === 0) {
             hue = 0
@@ -91,15 +91,20 @@ export class Color {
         })
     }
 
-    public static sortDefault(colors: Color[]) {
-        // 色相を10段階に分け、色相と明度でソートする。
+    public static sortDefault(colors: Color[], numOfHueDivisions = 10, useLuma = true) {
+        numOfHueDivisions = numOfHueDivisions < 1 ? 1 : numOfHueDivisions
+        numOfHueDivisions = numOfHueDivisions > 360 ? 360 : numOfHueDivisions
+        const divider = 360 / numOfHueDivisions
+
+        // 色相をnumOfHueDivisions段階に分け、色相と明度でソートする。
         // hue = 0は、グレーと定義
         // satとvalを1次不等式でグレーに選別
         // sat <= -8/100val + 10
         return colors.map(color => {
-            const hue = Math.round(color.hsv.h / 36) + 1
+            const hue = Math.floor(color.hsv.h / divider) + 1
+            const sat = 1
             const hueIndex = color.hsv.s + color.hsv.v * 8 / 100 <= 10 ? 0 : hue
-            const sortKey = hueIndex * 1000 + color.luma
+            const sortKey = hueIndex * 1000 + (useLuma ? color.luma : color.hsv.v)
             return {
                 sortKey,
                 color,
@@ -121,7 +126,7 @@ luma:   ${this.luma}
     }
 }
 
-export class ColorLib extends Array<Color> {
+export class ColorArray extends Array<Color> {
     public sortByHue() {
         return Color.sortByHue(this)
     }
@@ -130,7 +135,7 @@ export class ColorLib extends Array<Color> {
         return Color.sortByLuma(this)
     }
 
-    public sortDefault() {
-        return Color.sortDefault(this)
+    public sortDefault(numOfHueDivisions = 10, useLuma = true) {
+        return Color.sortDefault(this, numOfHueDivisions, useLuma)
     }
 }
