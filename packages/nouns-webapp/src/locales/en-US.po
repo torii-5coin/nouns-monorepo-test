@@ -18,16 +18,16 @@ msgid "% of Nouns Currently Against"
 msgstr "% of Nouns Currently Against"
 
 #: src/components/Documentation/index.tsx
-msgid "'Nounders' are the group of ten builders that initiated Nouns. Here are the Nounders:"
-msgstr "'Nounders' are the group of ten builders that initiated Nouns. Here are the Nounders:"
+msgid "'AsoUbuyama Nounders' are the group of ten builders that initiated AsoUbuyama Nouns. Here are the AsoUbuyama Nounders:"
+msgstr "'AsoUbuyama Nounders' are the group of ten builders that initiated AsoUbuyama Nouns. Here are the AsoUbuyama Nounders:"
 
 #: src/components/ByLineHoverCard/index.tsx
 msgid "... and {0} more"
 msgstr "... and {0} more"
 
 #: src/components/Documentation/index.tsx
-msgid "100% of Noun auction proceeds are trustlessly sent to the treasury."
-msgstr "100% of Noun auction proceeds are trustlessly sent to the treasury."
+msgid "100% of AsoUbuyama Noun auction proceeds are trustlessly sent to the treasury."
+msgstr "100% of AsoUbuyama Noun auction proceeds are trustlessly sent to the treasury."
 
 #: src/pages/Nounders/index.tsx
 msgid "3.5 artists, 6.5 technologists"
@@ -245,12 +245,12 @@ msgid "All Noun auction proceeds are sent to the"
 msgstr "All Noun auction proceeds are sent to the"
 
 #: src/pages/Nounders/index.tsx
-msgid "All Noun auction proceeds are sent to the Nouns DAO. For this reason, we, the project's founders (‘Nounders’) have chosen to compensate ourselves with Nouns. Every 10th noun for the first 5 years of the project will be sent to our multisig (5/10), where it will be vested and distributed to individual Nounders."
-msgstr "All Noun auction proceeds are sent to the Nouns DAO. For this reason, we, the project's founders (‘Nounders’) have chosen to compensate ourselves with Nouns. Every 10th noun for the first 5 years of the project will be sent to our multisig (5/10), where it will be vested and distributed to individual Nounders."
+#~ msgid "All Noun auction proceeds are sent to the Nouns DAO. For this reason, we, the project's founders (‘Nounders’) have chosen to compensate ourselves with Nouns. Every 10th noun for the first 5 years of the project will be sent to our multisig (5/10), where it will be vested and distributed to individual Nounders."
+#~ msgstr "All Noun auction proceeds are sent to the Nouns DAO. For this reason, we, the project's founders (‘Nounders’) have chosen to compensate ourselves with Nouns. Every 10th noun for the first 5 years of the project will be sent to our multisig (5/10), where it will be vested and distributed to individual Nounders."
 
 #: src/components/Documentation/index.tsx
-msgid "All Nouns are members of Nouns DAO."
-msgstr "All Nouns are members of Nouns DAO."
+msgid "All AsoUbuyama Nouns are members of AsoUbuyama Nouns DAO."
+msgstr "All AsoUbuyama Nouns are members of AsoUbuyama Nouns DAO."
 
 #: src/pages/CreateProposal/index.tsx
 #~ msgid "All Proposals"
@@ -310,8 +310,8 @@ msgid "Background"
 msgstr "Background"
 
 #: src/components/Documentation/index.tsx
-msgid "Because 100% of Noun auction proceeds are sent to Nouns DAO, Nounders have chosen to compensate themselves with Nouns. Every 10th Noun for the first 5 years of the project (Noun ids #0, #10, #20, #30 and so on) will be automatically sent to the Nounder's multisig to be vested and shared among the founding members of the project."
-msgstr "Because 100% of Noun auction proceeds are sent to Nouns DAO, Nounders have chosen to compensate themselves with Nouns. Every 10th Noun for the first 5 years of the project (Noun ids #0, #10, #20, #30 and so on) will be automatically sent to the Nounder's multisig to be vested and shared among the founding members of the project."
+msgid "Because 100% of AsoUbuyama Noun auction proceeds are sent to AsoUbuyama Nouns DAO, AsoUbuyama Nounders have chosen to compensate themselves with AsoUbuyama Nouns. Every 10th AsoUbuyama Noun for the first 5 years of the project (AsoUbuyama Noun ids #0, #10, #20, #30 and so on) will be automatically sent to the AsoUbuyama Nounder's multisig to be vested and shared among the founding members of the project."
+msgstr "Because 100% of AsoUbuyama Noun auction proceeds are sent to AsoUbuyama Nouns DAO, AsoUbuyama Nounders have chosen to compensate themselves with AsoUbuyama Nouns. Every 10th AsoUbuyama Noun for the first 5 years of the project (AsoUbuyama Noun ids #0, #10, #20, #30 and so on) will be automatically sent to the AsoUbuyama Nounder's multisig to be vested and shared among the founding members of the project."
 
 #: src/pages/CreateCandidate/index.tsx
 #: src/pages/CreateProposal/index.tsx
@@ -597,8 +597,8 @@ msgid "EVERY DAY,"
 msgstr "EVERY DAY,"
 
 #: src/components/Documentation/index.tsx
-msgid "Each time an auction is settled, the settlement transaction will also cause a new Noun to be minted and a new 24 hour auction to begin."
-msgstr "Each time an auction is settled, the settlement transaction will also cause a new Noun to be minted and a new 24 hour auction to begin."
+msgid "Each time an auction is settled, the settlement transaction will also cause a new AsoUbuyama Noun to be minted and a new 24 hour auction to begin."
+msgstr "Each time an auction is settled, the settlement transaction will also cause a new AsoUbuyama Noun to be minted and a new 24 hour auction to begin."
 
 #: src/pages/Candidate/index.tsx
 msgid "Edit"
@@ -783,8 +783,8 @@ msgid "Governance"
 msgstr "Governance"
 
 #: src/components/Documentation/index.tsx
-msgid "Governance ‘Slow Start’"
-msgstr "Governance ‘Slow Start’"
+#~ msgid "Governance ‘Slow Start’"
+#~ msgstr "Governance ‘Slow Start’"
 
 #: src/components/DelegationCandidateInfo/index.tsx
 msgid "Has"
@@ -837,8 +837,8 @@ msgid "Learn more"
 msgstr "Learn more"
 
 #: src/components/Documentation/index.tsx
-msgid "Learn more below, or start creating Nouns off-chain using the {playgroundLink}."
-msgstr "Learn more below, or start creating Nouns off-chain using the {playgroundLink}."
+msgid "Ubuyama Village is one of the municipalities with a declining birthrate, aging population, and depopulation. We hope that this project will help address the various issues facing the village."
+msgstr "Ubuyama Village is one of the municipalities with a declining birthrate, aging population, and depopulation. We hope that this project will help address the various issues facing the village."
 
 #: src/components/NounInfoRowHolder/index.tsx
 msgid "Loading..."
@@ -873,8 +873,8 @@ msgid "No candidates found"
 msgstr "No candidates found"
 
 #: src/components/Documentation/index.tsx
-msgid "No explicit rules exist for attribute scarcity; all Nouns are equally rare."
-msgstr "No explicit rules exist for attribute scarcity; all Nouns are equally rare."
+msgid "No explicit rules exist for attribute scarcity; all AsoUbuyama Nouns are equally rare."
+msgstr "No explicit rules exist for attribute scarcity; all AsoUbuyama Nouns are equally rare."
 
 #: src/components/Proposals/index.tsx
 msgid "No proposals found"
@@ -900,16 +900,16 @@ msgid "Note"
 msgstr "Note"
 
 #: src/pages/Governance/index.tsx
-msgid "Noun"
-msgstr "Noun"
+msgid "AsoUbuyama Noun"
+msgstr "AsoUbuyama Noun"
 
 #: src/components/Documentation/index.tsx
-msgid "Noun Seeder Contract"
-msgstr "Noun Seeder Contract"
+#~ msgid "Noun Seeder Contract"
+#~ msgstr "Noun Seeder Contract"
 
 #: src/components/Documentation/index.tsx
-msgid "Noun Traits"
-msgstr "Noun Traits"
+msgid "AsoUbuyama Noun Traits"
+msgstr "AsoUbuyama Noun Traits"
 
 #: src/components/CurrentDelegatePannel/index.tsx
 msgid "Noun votes are not transferable, but are <0>delegatable</0>, which means you can assign your vote to someone else as long as you own your Noun."
@@ -920,37 +920,37 @@ msgid "Noun {0}"
 msgstr "Noun {0}"
 
 #: src/components/Documentation/index.tsx
-msgid "Nounder distributions don't interfere with the cadence of 24 hour auctions. Nouns are sent directly to the Nounder's Multisig, and auctions continue on schedule with the next available Noun ID."
-msgstr "Nounder distributions don't interfere with the cadence of 24 hour auctions. Nouns are sent directly to the Nounder's Multisig, and auctions continue on schedule with the next available Noun ID."
+msgid "AsoUbuyama Nounder distributions don't interfere with the cadence of 24 hour auctions."
+msgstr "AsoUbuyama Nounder distributions don't interfere with the cadence of 24 hour auctions."
 
 #: src/components/Documentation/index.tsx
-msgid "Nounder's Reward"
-msgstr "Nounder's Reward"
+msgid "AsoUbuyama Nounder's Reward"
+msgstr "AsoUbuyama Nounder's Reward"
 
 #: src/components/Documentation/index.tsx
-msgid "Nounders receive rewards in the form of Nouns (10% of supply for first 5 years)."
-msgstr "Nounders receive rewards in the form of Nouns (10% of supply for first 5 years)."
+msgid "AsoUbuyama Nounders receive rewards in the form of Ubuyama Nouns (10% of supply for first 5 years)."
+msgstr "AsoUbuyama Nounders receive rewards in the form of Ubuyama Nouns (10% of supply for first 5 years)."
 
 #: src/pages/Nounders/index.tsx
-msgid "Nounders' Reward"
-msgstr "Nounders' Reward"
+#~ msgid "Nounders' Reward"
+#~ msgstr "Nounders' Reward"
 
 #: src/pages/Governance/index.tsx
-msgid "Nouns"
-msgstr "Nouns"
+msgid "AsoUbuyama Nouns"
+msgstr "AsoUbuyama Nouns"
 
 #: src/components/NavBar/index.tsx
-msgid "Nouns & Traits"
-msgstr "Nouns & Traits"
+msgid "AsoUbuyama Nouns & Traits"
+msgstr "AsoUbuyama Nouns & Traits"
 
 #: src/components/NounInfoRowHolder/index.tsx
-msgid "Nouns Auction House"
-msgstr "Nouns Auction House"
+msgid "AsoUbuyama Nouns Auction House"
+msgstr "AsoUbuyama Nouns Auction House"
 
 #: src/components/Documentation/index.tsx
 #: src/components/NounderNounContent/index.tsx
 #: src/pages/Governance/index.tsx
-msgid "Nouns DAO"
+msgid "AsoUbuyama Nouns DAO"
 msgstr "Nouns DAO"
 
 #: src/pages/Fork/index.tsx
@@ -962,32 +962,32 @@ msgid "Nouns DAO uses a fork of {compoundGovLink}."
 msgstr "Nouns DAO uses a fork of {compoundGovLink}."
 
 #: src/components/Documentation/index.tsx
-msgid "Nouns DAO utilizes a fork of {compoundGovLink} and is the main governing body of the Nouns ecosystem. The Nouns DAO treasury receives 100% of ETH proceeds from daily Noun auctions. Each Noun is an irrevocable member of Nouns DAO and entitled to one vote in all governance matters. Noun votes are non-transferable (if you sell your Noun the vote goes with it) but delegatable, which means you can assign your vote to someone else as long as you own your Noun."
-msgstr "Nouns DAO utilizes a fork of {compoundGovLink} and is the main governing body of the Nouns ecosystem. The Nouns DAO treasury receives 100% of ETH proceeds from daily Noun auctions. Each Noun is an irrevocable member of Nouns DAO and entitled to one vote in all governance matters. Noun votes are non-transferable (if you sell your Noun the vote goes with it) but delegatable, which means you can assign your vote to someone else as long as you own your Noun."
+msgid "AsoUbuyama Nouns DAO utilizes a fork of {compoundGovLink} and is the main governing body of the AsoUbuyama Nouns ecosystem. The AsoUbuyama Nouns DAO treasury receives 100% of ETH proceeds from daily AsoUbuyama Noun auctions. Each AsoUbuyama Noun is an irrevocable member of AsoUbuyama Nouns DAO and entitled to one vote in all governance matters. AsoUbuyama Noun votes are non-transferable (if you sell your AsoUbuyama Noun the vote goes with it) but delegatable, which means you can assign your vote to someone else as long as you own your AsoUbuyama Noun."
+msgstr "AsoUbuyama Nouns DAO utilizes a fork of {compoundGovLink} and is the main governing body of the AsoUbuyama Nouns ecosystem. The AsoUbuyama Nouns DAO treasury receives 100% of ETH proceeds from daily AsoUbuyama Noun auctions. Each AsoUbuyama Noun is an irrevocable member of AsoUbuyama Nouns DAO and entitled to one vote in all governance matters. AsoUbuyama Noun votes are non-transferable (if you sell your AsoUbuyama Noun the vote goes with it) but delegatable, which means you can assign your vote to someone else as long as you own your AsoUbuyama Noun."
 
 #: src/pages/Playground/index.tsx
 msgid "Nouns Protocol"
 msgstr "Nouns Protocol"
 
 #: src/components/Documentation/index.tsx
-msgid "Nouns are an experimental attempt to improve the formation of on-chain avatar communities. While projects such as {cryptopunksLink} have attempted to bootstrap digital community and identity, Nouns attempt to bootstrap identity, community, governance, and a treasury that can be used by the community."
-msgstr "Nouns are an experimental attempt to improve the formation of on-chain avatar communities. While projects such as {cryptopunksLink} have attempted to bootstrap digital community and identity, Nouns attempt to bootstrap identity, community, governance, and a treasury that can be used by the community."
+msgid "AsoUbuyama Nouns is a project to support the realization of a sustainable village that the village is challenging under the support of Kumamoto Ubuyama Village. This program is developed by forking Nouns."
+msgstr "AsoUbuyama Nouns is a project to support the realization of a sustainable village that the village is challenging under the support of Kumamoto Ubuyama Village. This program is developed by forking Nouns."
 
 #: src/components/Documentation/index.tsx
-msgid "Nouns are generated randomly based Ethereum block hashes. There are no 'if' statements or other rules governing Noun trait scarcity, which makes all Nouns equally rare. As of this writing, Nouns are made up of:"
-msgstr "Nouns are generated randomly based Ethereum block hashes. There are no 'if' statements or other rules governing Noun trait scarcity, which makes all Nouns equally rare. As of this writing, Nouns are made up of:"
+msgid "AsoUbuyama Nouns are generated randomly based Ethereum block hashes. There are no 'if' statements or other rules governing AsoUbuyama Noun trait scarcity, which makes all AsoUbuyama Nouns equally rare. As of this writing, AsoUbuyama Nouns are made up of:"
+msgstr "AsoUbuyama Nouns are generated randomly based Ethereum block hashes. There are no 'if' statements or other rules governing AsoUbuyama Noun trait scarcity, which makes all AsoUbuyama Nouns equally rare. As of this writing, AsoUbuyama Nouns are made up of:"
 
 #: src/components/Documentation/index.tsx
-msgid "Nouns are stored directly on Ethereum and do not utilize pointers to other networks such as IPFS. This is possible because Noun parts are compressed and stored on-chain using a custom run-length encoding (RLE), which is a form of lossless compression."
-msgstr "Nouns are stored directly on Ethereum and do not utilize pointers to other networks such as IPFS. This is possible because Noun parts are compressed and stored on-chain using a custom run-length encoding (RLE), which is a form of lossless compression."
+msgid "AsoUbuyama Nouns are stored directly on Ethereum and do not utilize pointers to other networks such as IPFS. This is possible because AsoUbuyama Noun parts are compressed and stored on-chain using a custom run-length encoding (RLE), which is a form of lossless compression."
+msgstr "AsoUbuyama Nouns are stored directly on Ethereum and do not utilize pointers to other networks such as IPFS. This is possible because AsoUbuyama Noun parts are compressed and stored on-chain using a custom run-length encoding (RLE), which is a form of lossless compression."
 
 #: src/components/Documentation/index.tsx
-msgid "Nouns artwork is in the {publicDomainLink}."
-msgstr "Nouns artwork is in the {publicDomainLink}."
+msgid "AsoUbuyama Nouns artwork is in the {publicDomainLink}."
+msgstr "AsoUbuyama Nouns artwork is in the {publicDomainLink}."
 
 #: src/pages/Governance/index.tsx
-msgid "Nouns govern <0>Nouns DAO</0>. Nouns can vote on proposals or delegate their vote to a third party. A minimum of <1>{0}</1> is required to submit proposals."
-msgstr "Nouns govern <0>Nouns DAO</0>. Nouns can vote on proposals or delegate their vote to a third party. A minimum of <1>{0}</1> is required to submit proposals."
+msgid "AsoUbuyama Nouns govern <0>AsoUbuyama Nouns DAO</0>. AsoUbuyama Nouns can vote on proposals or delegate their vote to a third party. A minimum of <1>{0}</1> is required to submit proposals."
+msgstr "AsoUbuyama Nouns govern <0>AsoUbuyama Nouns DAO</0>. AsoUbuyama Nouns can vote on proposals or delegate their vote to a third party. A minimum of <1>{0}</1> is required to submit proposals."
 
 #: src/pages/Governance/index.tsx
 #~ msgid "Nouns govern <0>Nouns DAO</0>. Nouns can vote on proposals or delegate their vote to a third party. A minimum of <1>{nounsRequired} {0}</1> is required to submit proposals."
@@ -1031,12 +1031,12 @@ msgid "Once a signed proposal is onchain, signers will need to wait until the pr
 msgstr "Once a signed proposal is onchain, signers will need to wait until the proposal is queued or defeated before putting another proposal onchain."
 
 #: src/components/Documentation/index.tsx
-msgid "One Noun is equal to one vote."
-msgstr "One Noun is equal to one vote."
+msgid "One AsoUbuyama Noun is equal to one vote."
+msgstr "One AsoUbuyama Noun is equal to one vote."
 
 #: src/components/Documentation/index.tsx
-msgid "One Noun is trustlessly auctioned every 24 hours, forever."
-msgstr "One Noun is trustlessly auctioned every 24 hours, forever."
+msgid "One AsoUbuyama Noun is trustlessly auctioned every 24 hours, forever."
+msgstr "One AsoUbuyama Noun is trustlessly auctioned every 24 hours, forever."
 
 #: src/components/NounsIntroSection/index.tsx
 msgid "One Noun, Every Day, Forever."
@@ -1047,8 +1047,8 @@ msgid "Only 32x32 PNG images are accepted"
 msgstr "Only 32x32 PNG images are accepted"
 
 #: src/components/ProposalHeader/index.tsx
-msgid "Only Nouns you owned or were delegated to you before {0} are eligible to vote."
-msgstr "Only Nouns you owned or were delegated to you before {0} are eligible to vote."
+msgid "Only AsoUbuyama Nouns you owned or were delegated to you before {0} are eligible to vote."
+msgstr "Only AsoUbuyama Nouns you owned or were delegated to you before {0} are eligible to vote."
 
 #: src/pages/Vote/index.tsx
 msgid "Only visible to you"

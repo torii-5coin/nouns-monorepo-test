@@ -19,11 +19,11 @@ const GovernancePage = () => {
   const treasuryBalanceUSD = useTreasuryUSDValue();
 
   // Note: We have to extract this copy out of the <span> otherwise the Lingui macro gets confused
-  const nounSingular = <Trans>Ubuyama Noun</Trans>;
-  const nounPlural = <Trans>Ubuyama Nouns</Trans>;
+  const nounSingular = <Trans>AsoUbuyama Noun</Trans>;
+  const nounPlural = <Trans>AsoUbuyama Nouns</Trans>;
   const subHeading = (
     <Trans>
-      Ubuyama Nouns govern <span className={classes.boldText}>Ubuyama Nouns DAO</span>. Ubuyama Nouns can vote on proposals
+      AsoUbuyama Nouns govern <span className={classes.boldText}>AsoUbuyama Nouns DAO</span>. AsoUbuyama Nouns can vote on proposals
       or delegate their vote to a third party. A minimum of{' '}
       <span className={classes.boldText}>
         {nounsRequired ? (
@@ -47,7 +47,7 @@ const GovernancePage = () => {
               <Trans>Governance</Trans>
             </span>
             <h1>
-              <Trans>Ubuyama Nouns DAO</Trans>
+              <Trans>AsoUbuyama Nouns DAO</Trans>
             </h1>
           </Row>
           <p className={classes.subheading}>{subHeading}</p>
@@ -80,9 +80,9 @@ const GovernancePage = () => {
             </Col>
             <Col className={classes.treasuryInfoText}>
               <Trans>
-                This treasury exists for <span className={classes.boldText}>Ubuyama Nouns DAO</span>{' '}
+                This treasury exists for <span className={classes.boldText}>AsoUbuyama Nouns DAO</span>{' '}
                 participants to allocate resources for the long-term growth and prosperity of the
-                Ubuyama Nouns project.
+                AsoUbuyama Nouns project.
               </Trans>
             </Col>
           </Row>
