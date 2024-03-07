@@ -241,8 +241,8 @@ msgid "Against"
 msgstr "Against"
 
 #: src/components/NounderNounContent/index.tsx
-msgid "All Noun auction proceeds are sent to the"
-msgstr "All Noun auction proceeds are sent to the"
+msgid "All AsoUbuyama Noun auction proceeds are sent to the "
+msgstr "All AsoUbuyama Noun auction proceeds are sent to the "
 
 #: src/pages/Nounders/index.tsx
 #~ msgid "All Noun auction proceeds are sent to the Nouns DAO. For this reason, we, the project's founders (‘Nounders’) have chosen to compensate ourselves with Nouns. Every 10th noun for the first 5 years of the project will be sent to our multisig (5/10), where it will be vested and distributed to individual Nounders."
@@ -951,7 +951,7 @@ msgstr "AsoUbuyama Nouns Auction House"
 #: src/components/NounderNounContent/index.tsx
 #: src/pages/Governance/index.tsx
 msgid "AsoUbuyama Nouns DAO"
-msgstr "Nouns DAO"
+msgstr "AsoUbuyama Nouns DAO"
 
 #: src/pages/Fork/index.tsx
 msgid "Nouns DAO Fork{0}"
@@ -1569,8 +1569,8 @@ msgid "This transaction was automatically added to refill the TokenBuyer. Propos
 msgstr "This transaction was automatically added to refill the TokenBuyer. Proposers do not receive this ETH."
 
 #: src/pages/Governance/index.tsx
-msgid "This treasury exists for <0>Nouns DAO</0> participants to allocate resources for the long-term growth and prosperity of the Nouns project."
-msgstr "This treasury exists for <0>Nouns DAO</0> participants to allocate resources for the long-term growth and prosperity of the Nouns project."
+msgid "This treasury exists for <0>AsoUbuyama Nouns DAO</0> participants to allocate resources for the long-term growth and prosperity of the AsoUbuyama Nouns project."
+msgstr "This treasury exists for <0>AsoUbuyama Nouns DAO</0> participants to allocate resources for the long-term growth and prosperity of the AsoUbuyama Nouns project."
 
 #: src/pages/EditCandidate/index.tsx
 msgid "This will clear all previous sponsors and feedback votes"

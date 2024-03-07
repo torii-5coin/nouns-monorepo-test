@@ -254,8 +254,8 @@ msgid "Against"
 msgstr "反対"
 
 #: src/components/NounderNounContent/index.tsx
-msgid "All Noun auction proceeds are sent to the"
-msgstr "すべてのNounオークションの収益は、"
+msgid "All AsoUbuyama Noun auction proceeds are sent to the"
+msgstr "すべてのAsoUbuyama Nounオークションの収益は、"
 
 #: src/pages/Nounders/index.tsx
 #~ msgid "All Noun auction proceeds are sent to the Nouns DAO. For this reason, we, the project's founders (‘Nounders’) have chosen to compensate ourselves with Nouns. Every 10th noun for the first 5 years of the project will be sent to our multisig (5/10), where it will be vested and distributed to individual Nounders."
@@ -737,8 +737,8 @@ msgid "For"
 msgstr "賛成"
 
 #: src/components/NounderNounContent/index.tsx
-msgid "For this reason, we, the project's founders (‘Nounders’) have chosen to compensate ourselves with Nouns. Every 10th Noun for the first 5 years of the project will be sent to our multisig (5/10), where it will be vested and distributed to individual Nounders."
-msgstr "その為、我々、プロジェクトの創設者 (Nounders) はNounsで自らを補償することに決めました。 プロジェクトの最初の5年間の間は、毎回10体目のNounがマルチシグ(5/10) に送られた後、個々のNoundersに与えられ、配布されます。"
+msgid "For this reason, we, the project's founders (‘AsoUbuyama Nounders’) have chosen to compensate ourselves with AsoUbuyama Nouns. Every 10th AsoUbuyama Noun for the first 5 years of the project will be sent to AsoUbuyama Nounders."
+msgstr "そのため、初期メンバーは自分達をAsoUbuyama Nounsで報酬を受け取ります。プロジェクトの最初の5年間の間、毎回10番目のAsoUbuyama Noun (AsoUbuyama Noun ID #0, #10, #20, #30 など) が自動的に初期メンバーに送られます。"
 
 #: src/components/NavBar/index.tsx
 #: src/components/NavBar/index.tsx
