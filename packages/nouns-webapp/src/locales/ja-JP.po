@@ -209,7 +209,7 @@ msgstr ""
 
 #: src/pages/CreateProposal/index.tsx
 msgid "Add one or more proposal actions and describe your proposal for the community. The proposal cannot be modified after submission, so please verify all information before submitting. The voting period will begin after 5 days and last for 5 days."
-msgstr ""
+msgstr "1つまたは複数の提案アクションを追加し、コミュニティへの提案を説明してください。提案は提出後に修正できませんので、提出前にすべての情報を確認してください。投票期間は5日後から5日間です。"
 
 #: src/pages/CreateProposal/index.tsx
 #~ msgid "Add one or more transactions and describe your proposal for the community. The proposal cannot be modified after submission, so please verify all information before submitting. The voting period will begin after 2 1/3 days and last for 3 days."
@@ -1832,7 +1832,7 @@ msgstr "あなたはこの提案から<0>棄権</0>しました"
 
 #: src/pages/CreateProposal/index.tsx
 msgid "You <0>MUST</0> maintain enough voting power to meet the proposal threshold until your proposal is executed. If you fail to do so, anyone can cancel your proposal."
-msgstr ""
+msgstr "提案が実行されるまで、提案基準を満たすだけの議決権を維持<0>しなければなりません</0>。もしそれができなければ、誰でもあなたの提案を取り消すことができます。"
 
 #: src/components/CreateCandidateButton/index.tsx
 #: src/components/CreateProposalButton/index.tsx
