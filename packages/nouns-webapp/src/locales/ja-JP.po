@@ -1050,7 +1050,7 @@ msgstr "32x32 PNG画像のみ受け付けています"
 
 #: src/components/ProposalHeader/index.tsx
 msgid "Only AsoUbuyama Nouns you owned or were delegated to you before {0} are eligible to vote."
-msgstr "投票できるのは {0} 以前に所有していた、または委任されたAsoUbuyama Nounsのみです。"
+msgstr "{0} 以前に所有していたか委任されたAsoUbuyama Nounsが投票できます。"
 
 #: src/pages/Vote/index.tsx
 msgid "Only visible to you"
