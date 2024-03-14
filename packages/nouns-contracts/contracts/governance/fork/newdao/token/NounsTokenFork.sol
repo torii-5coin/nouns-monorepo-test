@@ -127,7 +127,7 @@ contract NounsTokenFork is INounsTokenFork, OwnableUpgradeable, ERC721Checkpoint
         uint256 tokensToClaim,
         uint256 _forkingPeriodEndTimestamp
     ) external initializer {
-        __ERC721_init('Nouns', 'NOUN');
+        __ERC721_init('AsoUbuyama Nouns', 'AsoUbuyama NOUN');
         _transferOwnership(_owner);
         minter = _minter;
         escrow = _escrow;
