@@ -100,6 +100,8 @@ contract NounsToken is INounsToken, Ownable, ERC721Checkpointable {
         _;
     }
 
+    event ContractURIUpdated(string prevURI, string newURI);
+
     constructor(
         address _noundersDAO,
         address _minter,
@@ -126,7 +128,11 @@ contract NounsToken is INounsToken, Ownable, ERC721Checkpointable {
      * @dev Only callable by the owner.
      */
     function setContractURIHash(string memory newContractURIHash) external onlyOwner {
+        string memory prevURI = contractURI();
         _contractURIHash = newContractURIHash;
+        string memory newURI = contractURI();
+
+        emit ContractURIUpdated(prevURI, newURI);
     }
 
     /**
