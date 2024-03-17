@@ -6,7 +6,6 @@ import { Interface, parseUnits } from 'ethers/lib/utils';
 import { task, types } from 'hardhat/config';
 import {BigNumber, constants} from 'ethers';
 import promptjs from 'prompt';
-import {deploy} from "@openzeppelin/hardhat-upgrades/dist/utils";
 
 promptjs.colors = false;
 promptjs.message = '> ';
@@ -26,33 +25,34 @@ const wethContracts: Record<number, string> = {
   [ChainId.Holesky]: '0x0014e5C0B28dfFFb02D0B1A7d6aE2eAEde19d577',
 };
 
+// *1: 再利用可能（参照される側なので使い回せる）
 const deployedContracts: Record<ContractNamesDAOV3, string> = {
-  NFTDescriptorV2: "0xc6998c427e1C6A6469A7B906E313d3cd30b800D1",
-  SVGRenderer: "0x3Fc23EE607A9d064835d2d8179a422AB9FD52079",
-  NounsDescriptorV2: "0x01eFE74D8Dfed54bC75AdE51dF6e3559F0F37b78",
-  Inflator: "0xbEfe1aA1fc16A0D3698Dd63741D7af65ADC25A9B",
-  NounsArt: "0x79c9322b112aC1cF7122988B6E323d00f3a2d24F",
-  NounsSeeder: "0x53B973da6a3f2aEa3cb73858db884DF4758186bc",
-  NounsToken: "0x56880883c33dd0a0F08bB356F9d95f38C16fB3c5",
-  NounsAuctionHouse: "0x0f1a7B1a7844596200462508c749a29E3b7e66c6",
-  NounsAuctionHouseProxyAdmin: "0x0F5EF31df21ea6220b293D78E2c60A87c128483C",
-  NounsAuctionHouseProxy: "0xE9cfCE4F3421f2515Ea18fcbd0AFfdca4C464Ba8",
-  NounsDAOV3DynamicQuorum: "0xAF8ea5Df3A062687872746C831F3C9Bd5af5393B",
-  NounsDAOV3Admin: "0xe2b190a1a4eaa093d4eE3109a377AA600C963a9A",
-  NounsDAOV3Proposals: "0xfBE2D48E8111Fa88dD9B76A4C235a13B1d518f97",
-  NounsDAOV3Votes: "0x876cE638fdF1D6897295cb72978ec90C4923a67B",
-  NounsDAOV3Fork: "0x070AC3da3d0180a4Ec27C5cf7Aa646378C4758c9",
-  NounsDAOLogicV3: "0x38aF93f03F6EaE5B71D55a70559d51BEb86815cA",
-  NounsDAOForkEscrow: "0x4Ee1A7b040709EAcDaBA95B465feF22209237D81",
-  NounsTokenFork: "0xF0dF38807F8fD87b241B9927Ee5FA4bc44222FA1",
-  NounsAuctionHouseFork: "0x1951d86f7E0198cc28AF2Ec60A139a5C1973CDC8",
-  NounsDAOLogicV1Fork: "0xf29f493F33398269e3ECB9145557830677F07e76",
-  NounsDAOExecutorV2: "0x4BE36670e29F1EE3850D5A6e188b9b671A8829c9",
-  NounsDAOExecutorProxy: "0xfae89D3b660bE79Db536641Abcecaa3dbd51c144",
-  ForkDAODeployer: "0x011B69bB1B3D3531e6007aC5a3e9F57956653b79",
-  NounsDAOProxyV3: "0x1059f9876DFd13e4A04E1a0A7e2b63bf1cE55386",
-  NounsDAOData: "0xF53c97c8B1A18cded3839a6Ddf36B989De20a6A2",
-  NounsDAODataProxy: "0xDC30FD07B6De0A08A326d83c5a738cD08e55A630",
+  NFTDescriptorV2: "0x4f26797006236ac459034E70Fc3ec26180F43549",
+  SVGRenderer: "0x4f26797006236ac459034E70Fc3ec26180F43549",
+  NounsDescriptorV2: "0xF9F2B44c03EBF2011aba7aBb6daDbDeBd16c599b",
+  Inflator: "0x02af38C3cc7E89121781B93522911BE6eacB3A57", // *1
+  NounsArt: "0x4F836c72503cB0a83B58C398Abc985d38a022B11",
+  NounsSeeder: "0x0cAfefb399C09635EDf4Ef0D7B8c4Ff1695D5e9D", // *1
+  NounsToken: "0x327c5D5940dF2F3C3E48edC1a1a39D37b10405c5",
+  NounsAuctionHouse: "0xE7c2b6622cf8D39a6722eFA5568606F6665ed73E",
+  NounsAuctionHouseProxyAdmin: "0xa315604D1c54e7B57B753Fd70B2Ed66dC5c0710d", // *1
+  NounsAuctionHouseProxy: "0xda552FEcf2cC1768113eA3c243B9C8b92cE6Dc94",
+  NounsDAOV3DynamicQuorum: "0xc9D5596B8ef9E565b55A20a042FE6C39Ec3120D7", // *1
+  NounsDAOV3Admin: "0xEAF067Eb6C6D7DFdCb8aF051278e074CBb733792", // *1
+  NounsDAOV3Proposals: "0x5d3AB01e77Af1B00b462d8Ce0E9557ddcE2eA34E", // *1
+  NounsDAOV3Votes: "0x3b8224e297BbfB7F851954F701Ca1d77fDb79d4d", // *1
+  NounsDAOV3Fork: "0x45a8dCCE641cF6B0f4c58f8C53e776826C663518", // *1
+  NounsDAOLogicV3: "0x0da3F6d484428f96d01C085007Dd88DDed28e6D8",
+  NounsDAOForkEscrow: "0xEBFF0b2364cBe70e28c6A060C0FB1b013Cfe7Be0",
+  NounsTokenFork: "0x3feAc3c5A8360F3571ce40b9414F93e1e05b29a0", // *1
+  NounsAuctionHouseFork: "0x72cc1B63B55EdC5C36cF61b3926106c85D35373A", // *1
+  NounsDAOLogicV1Fork: "0x4Aa3ec0f97053200e10fe728b26AC8DB158FC441", // *1
+  NounsDAOExecutorV2: "0x4499288d71A3b9e5d13155067AFcB2DC236d5cbB",
+  NounsDAOExecutorProxy: "0x01546E47e8A367EC50084849348Fa585b5FE42B7",
+  ForkDAODeployer: "0xcd8E16C20e8eC37Ce46529Ffc245DB62CC377061",
+  NounsDAOProxyV3: "0x6420C2D442AF833732BECa16171127Dad6c4eA65",
+  NounsDAOData: "0xD7174A1cb2Fb7eCaD0D364064cC9669eD11DF4A5",
+  NounsDAODataProxy: "0x101980b36d3c4cbbFb02d00602222830aE9DcFC0",
 }
 task('deploy-dao-v3', 'Deploy all Nouns contracts with short gov times for testing')
   .addFlag('autoDeploy', 'Deploy all contracts without user interaction')

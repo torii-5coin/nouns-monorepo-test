@@ -1,6 +1,6 @@
 import { task, types } from 'hardhat/config';
 import { printContractsTable } from './utils';
-import {BigNumber, Contract} from 'ethers'
+import { Contract } from 'ethers'
 
 task(
   'deploy-and-configure-dao-v3',
@@ -124,6 +124,7 @@ task(
         // ガス不足(Base gasだけで不足する)になるので、20%足す
         const addGasPrice = gasPrice.div(ethers.BigNumber.from(5));
         gasPrice = gasPrice.add(addGasPrice);
+        console.log(`gasPrice: ${gasPrice}`)
 
         const options = { gasLimit, gasPrice };
         const response = await contracts.NounsToken.instance.mint(options);
