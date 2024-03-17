@@ -82,7 +82,7 @@ contract NounsTokenFork is INounsTokenFork, OwnableUpgradeable, ERC721Checkpoint
     uint256 private _currentNounId;
 
     /// @notice IPFS content hash of contract-level metadata
-    string private _contractURIHash = 'QmZi1n79FqWt2tTLwCqiy6nLM6xLGRsEPQ5JmReJQKNNzX';
+    string private _contractURIHash = 'bafkreih7poqtzcpbneyf6zrqawf5ltqhx6tqfnmxknimktlh5y7c5ngs6m';
 
     /**
      * @notice Require that the minter has not been locked.
