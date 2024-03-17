@@ -261,8 +261,8 @@ contract NounsDescriptor is INounsDescriptor, Ownable {
      */
     function dataURI(uint256 tokenId, INounsSeeder.Seed memory seed) public view override returns (string memory) {
         string memory nounId = tokenId.toString();
-        string memory name = string(abi.encodePacked('Noun ', nounId));
-        string memory description = string(abi.encodePacked('Noun ', nounId, ' is a member of the Nouns DAO'));
+        string memory name = string(abi.encodePacked('AsoUbuyama Noun ', nounId));
+        string memory description = string(abi.encodePacked('AsoUbuyama Noun ', nounId, ' is a member of the AsoUbuyama Nouns DAO'));
 
         return genericDataURI(name, description, seed);
     }
