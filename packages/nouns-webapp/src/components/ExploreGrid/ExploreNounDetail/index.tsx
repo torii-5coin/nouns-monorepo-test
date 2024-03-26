@@ -253,10 +253,10 @@ const ExploreNounDetail: React.FC<ExploreNounDetailProps> = props => {
             {nounId !== null && seed ? (
               <Image
                 src={props.noun.imgSrc || `https://noun.pics/${nounId}.svg`}
-                alt={`Noun ${nounId}`}
+                alt={`AsoUbuyama Noun ${nounId}`}
               />
             ) : (
-              <Image src={loadingNoun} alt="Loading noun" />
+              <Image src={loadingNoun} alt="Loading AsoUbuyama noun" />
             )}
           </div>
 

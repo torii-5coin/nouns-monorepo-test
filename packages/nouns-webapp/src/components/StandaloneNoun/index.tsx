@@ -26,8 +26,8 @@ interface StandaloneNounWithSeedProps {
 
 export const getNoun = (nounId: string | EthersBN, seed: INounSeed) => {
   const id = nounId.toString();
-  const name = `Noun ${id}`;
-  const description = `Noun ${id} is a member of the Nouns DAO`;
+  const name = `AsoUbuyama Noun ${id}`;
+  const description = `AsoUbuyama Noun ${id} is a member of the AsoUbuyama Nouns DAO`;
   const { parts, background } = getNounData(seed);
   const image = `data:image/svg+xml;base64,${btoa(buildSVG(parts, data.palette, background))}`;
 
@@ -63,7 +63,7 @@ const StandaloneNoun: React.FC<StandaloneNounProps> = (props: StandaloneNounProp
       className={classes.clickableNoun}
       onClick={onClickHandler}
     >
-      <Noun imgPath={noun ? noun.image : ''} alt={noun ? noun.description : 'Noun'} />
+      <Noun imgPath={noun ? noun.image : ''} alt={noun ? noun.description : 'AsoUbuyama Noun'} />
     </Link>
   );
 };
@@ -80,7 +80,7 @@ export const StandaloneNounCircular: React.FC<StandaloneCircularNounProps> = (
     dispatch(setOnDisplayAuctionNounId(nounId.toNumber()));
   };
 
-  if (!seed || !nounId) return <Noun imgPath="" alt="Noun" wrapperClassName={nounClasses.circularNounWrapper} />;
+  if (!seed || !nounId) return <Noun imgPath="" alt="AsoUbuyama Noun" wrapperClassName={nounClasses.circularNounWrapper} />;
 
   return (
     <Link
@@ -90,7 +90,7 @@ export const StandaloneNounCircular: React.FC<StandaloneCircularNounProps> = (
     >
       <Noun
         imgPath={noun ? noun.image : ''}
-        alt={noun ? noun.description : 'Noun'}
+        alt={noun ? noun.description : 'AsoUbuyama Noun'}
         wrapperClassName={nounClasses.circularNounWrapper}
         className={border ? nounClasses.circleWithBorder : nounClasses.circular}
       />
@@ -118,7 +118,7 @@ export const StandaloneNounRoundedCorners: React.FC<StandaloneNounProps> = (
     >
       <Noun
         imgPath={noun ? noun.image : ''}
-        alt={noun ? noun.description : 'Noun'}
+        alt={noun ? noun.description : 'AsoUbuyama Noun'}
         className={nounClasses.rounded}
       />
     </Link>
@@ -134,7 +134,7 @@ export const StandaloneNounWithSeed: React.FC<StandaloneNounWithSeedProps> = (
   const seed = useNounSeed(nounId);
   const seedIsInvalid = Object.values(seed || {}).every(v => v === 0);
 
-  if (!seed || seedIsInvalid || !nounId || !onLoadSeed) return <Noun imgPath="" alt="Noun" />;
+  if (!seed || seedIsInvalid || !nounId || !onLoadSeed) return <Noun imgPath="" alt="AsoUbuyama Noun" />;
 
   onLoadSeed(seed);
 

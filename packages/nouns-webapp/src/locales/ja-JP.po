@@ -727,8 +727,8 @@ msgstr "Noun の活動履歴の取得に失敗しました。"
 
 #: src/components/Holder/index.tsx
 #: src/components/NounInfoRowHolder/index.tsx
-msgid "Failed to fetch Noun info"
-msgstr "Nounに関する情報の取得に失敗しました"
+msgid "Failed to fetch AsoUbuyama Noun info"
+msgstr "AsoUbuyama Nounに関する情報の取得に失敗しました"
 
 #: src/components/VoteCard/index.tsx
 #: src/components/VoteModal/index.tsx

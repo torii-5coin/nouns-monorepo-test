@@ -37,7 +37,7 @@ const NounInfoRowHolder: React.FC<NounInfoRowHolderProps> = props => {
   } else if (error) {
     return (
       <div>
-        <Trans>Failed to fetch Noun info</Trans>
+        <Trans>Failed to fetch AsoUbuyama Noun info</Trans>
       </div>
     );
   }
@@ -70,7 +70,7 @@ const NounInfoRowHolder: React.FC<NounInfoRowHolderProps> = props => {
             rel="noreferrer"
           >
             {winner.toLowerCase() === config.addresses.nounsAuctionHouseProxy.toLowerCase() ? (
-              <Trans>Nouns Auction House</Trans>
+              <Trans>AsoUbuyama Nouns Auction House</Trans>
             ) : (
               shortAddressComponent
             )}
