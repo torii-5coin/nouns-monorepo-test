@@ -1429,8 +1429,8 @@ msgid "Switch"
 msgstr "切り替え"
 
 #: src/pages/Vote/index.tsx
-msgid "Switch to Noun view"
-msgstr "Nounビューに切り替えます"
+msgid "Switch to AsoUbuyama Noun view"
+msgstr "AsoUbuyama Nounビューに切り替えます"
 
 #: src/pages/Vote/index.tsx
 msgid "Switch to delegate view"
