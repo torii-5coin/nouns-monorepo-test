@@ -1767,11 +1767,11 @@ msgid "Votes"
 msgstr "票"
 
 #: src/components/VoteModal/index.tsx
-msgid "Voting with <0>{0}</0> Noun"
+msgid "Voting with <0>{0}</0> AsoUbuyama Noun"
 msgstr ""
 
 #: src/components/VoteModal/index.tsx
-msgid "Voting with <0>{0}</0> Nouns"
+msgid "Voting with <0>{0}</0> AsoUbuyama Nouns"
 msgstr ""
 
 #: src/components/Documentation/index.tsx
