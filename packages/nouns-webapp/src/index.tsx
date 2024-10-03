@@ -31,6 +31,7 @@ import LogsUpdater from './state/updaters/logs';
 import config, {
   CHAIN_ID,
   ChainId_Sepolia,
+  ChainId_Holesky,
   createNetworkHttpUrl,
   multicallOnLocalhost,
 } from './config';
@@ -90,6 +91,7 @@ const supportedChainURLs = {
   [ChainId.Hardhat]: 'http://localhost:8545',
   [ChainId.Goerli]: createNetworkHttpUrl('goerli'),
   [ChainId_Sepolia]: createNetworkHttpUrl('sepolia'),
+  [ChainId_Holesky]: createNetworkHttpUrl('holesky'),
 };
 
 export const Sepolia: Chain = {
@@ -101,6 +103,17 @@ export const Sepolia: Chain = {
   getExplorerAddressLink: (address: string) => `https://sepolia.etherscan.io/address/${address}`,
   getExplorerTransactionLink: (transactionHash: string) =>
     `https://sepolia.etherscan.io/tx/${transactionHash}`,
+};
+
+export const Holesky: Chain = {
+  chainId: ChainId_Holesky,
+  chainName: 'Holesky',
+  isTestChain: true,
+  isLocalChain: false,
+  multicallAddress: '0xcA11bde05977b3631167028862bE2a173976CA11',
+  getExplorerAddressLink: (address: string) => `https://holesky.etherscan.io/address/${address}`,
+  getExplorerTransactionLink: (transactionHash: string) =>
+    `https://holesky.etherscan.io/tx/${transactionHash}`,
 };
 
 // prettier-ignore
