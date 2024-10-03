@@ -27,7 +27,8 @@ interface AppConfig {
 }
 
 export const ChainId_Sepolia = 11155111;
-type SupportedChains = ChainId.Mainnet | ChainId.Hardhat | ChainId.Goerli | typeof ChainId_Sepolia;
+export const ChainId_Holesky = 17000;
+type SupportedChains = ChainId.Mainnet | ChainId.Hardhat | ChainId.Goerli | typeof ChainId_Sepolia | typeof ChainId_Holesky;
 
 interface CacheBucket {
   name: string;
@@ -86,6 +87,15 @@ const app: Record<SupportedChains, AppConfig> = {
     exploreUri: 'https://testnets.opensea.io/collection/asoubuyama-nouns-2',
     nounder_address: '0x1AeB1E02E734a4797F3e2D1f96b645259E20D684',
   },
+  [ChainId_Holesky]: {
+    jsonRpcUri: createNetworkHttpUrl('holesky'),
+    wsRpcUri: createNetworkWsUrl('holesky'),
+    subgraphApiUri:
+      'https://api.goldsky.com/api/public/project_clrblkohp8nlx01q7evjz0x5h/subgraphs/ubuyama-holesky/v0.0.1/gn',
+    enableHistory: process.env.REACT_APP_ENABLE_HISTORY === 'true',
+    exploreUri: 'https://testnets.opensea.io/collection/asoubuyama-nouns-2',
+    nounder_address: '0xEB0BAfB81f157a72eF61F123764F572452B496A4',
+  },
   [ChainId.Mainnet]: {
     jsonRpcUri: createNetworkHttpUrl('mainnet'),
     wsRpcUri: createNetworkWsUrl('mainnet'),
@@ -118,6 +128,16 @@ const externalAddresses: Record<SupportedChains, ExternalContractAddresses> = {
     lidoToken: undefined,
     usdcToken: '0xEbCC972B6B3eB15C0592BE1871838963d0B94278',
     weth: '0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14',
+    steth: undefined,
+    payerContract: '0x5a2A0951C6b3479DBEe1D5909Aac7B325d300D94',
+    tokenBuyer: '0x821176470cFeF1dB78F1e2dbae136f73c36ddd48',
+    chainlinkEthUsdc: '0x694AA1769357215DE4FAC081bf1f309aDC325306',
+    nounsStreamFactory: '0xb78ccF3BD015f209fb9B2d3d132FD8784Df78DF5',
+  },
+  [ChainId_Holesky]: {
+    lidoToken: undefined,
+    usdcToken: '0xEbCC972B6B3eB15C0592BE1871838963d0B94278',
+    weth: '0x0014e5C0B28dfFFb02D0B1A7d6aE2eAEde19d577',
     steth: undefined,
     payerContract: '0x5a2A0951C6b3479DBEe1D5909Aac7B325d300D94',
     tokenBuyer: '0x821176470cFeF1dB78F1e2dbae136f73c36ddd48',

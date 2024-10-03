@@ -27,32 +27,32 @@ const wethContracts: Record<number, string> = {
 
 // *1: 再利用可能（参照される側なので使い回せる）
 const deployedContracts: Record<ContractNamesDAOV3, string> = {
-  NFTDescriptorV2: "0x4f26797006236ac459034E70Fc3ec26180F43549",
-  SVGRenderer: "0x4f26797006236ac459034E70Fc3ec26180F43549",
-  NounsDescriptorV2: "0xF9F2B44c03EBF2011aba7aBb6daDbDeBd16c599b",
-  Inflator: "0x02af38C3cc7E89121781B93522911BE6eacB3A57", // *1
-  NounsArt: "0x4F836c72503cB0a83B58C398Abc985d38a022B11",
-  NounsSeeder: "0x0cAfefb399C09635EDf4Ef0D7B8c4Ff1695D5e9D", // *1
-  NounsToken: "0x327c5D5940dF2F3C3E48edC1a1a39D37b10405c5",
-  NounsAuctionHouse: "0xE7c2b6622cf8D39a6722eFA5568606F6665ed73E",
-  NounsAuctionHouseProxyAdmin: "0xa315604D1c54e7B57B753Fd70B2Ed66dC5c0710d", // *1
-  NounsAuctionHouseProxy: "0xda552FEcf2cC1768113eA3c243B9C8b92cE6Dc94",
-  NounsDAOV3DynamicQuorum: "0xc9D5596B8ef9E565b55A20a042FE6C39Ec3120D7", // *1
-  NounsDAOV3Admin: "0xEAF067Eb6C6D7DFdCb8aF051278e074CBb733792", // *1
-  NounsDAOV3Proposals: "0x5d3AB01e77Af1B00b462d8Ce0E9557ddcE2eA34E", // *1
-  NounsDAOV3Votes: "0x3b8224e297BbfB7F851954F701Ca1d77fDb79d4d", // *1
-  NounsDAOV3Fork: "0x45a8dCCE641cF6B0f4c58f8C53e776826C663518", // *1
-  NounsDAOLogicV3: "0x0da3F6d484428f96d01C085007Dd88DDed28e6D8",
-  NounsDAOForkEscrow: "0xEBFF0b2364cBe70e28c6A060C0FB1b013Cfe7Be0",
-  NounsTokenFork: "0x3feAc3c5A8360F3571ce40b9414F93e1e05b29a0", // *1
-  NounsAuctionHouseFork: "0x72cc1B63B55EdC5C36cF61b3926106c85D35373A", // *1
-  NounsDAOLogicV1Fork: "0x4Aa3ec0f97053200e10fe728b26AC8DB158FC441", // *1
-  NounsDAOExecutorV2: "0x4499288d71A3b9e5d13155067AFcB2DC236d5cbB",
-  NounsDAOExecutorProxy: "0x01546E47e8A367EC50084849348Fa585b5FE42B7",
-  ForkDAODeployer: "0xcd8E16C20e8eC37Ce46529Ffc245DB62CC377061",
-  NounsDAOProxyV3: "0x6420C2D442AF833732BECa16171127Dad6c4eA65",
-  NounsDAOData: "0xD7174A1cb2Fb7eCaD0D364064cC9669eD11DF4A5",
-  NounsDAODataProxy: "0x101980b36d3c4cbbFb02d00602222830aE9DcFC0",
+  NFTDescriptorV2: "0x40f6e77813CDFCd0AC705f16B9C51084837d94c1", // independent
+  SVGRenderer: "0xc0bfBC2516A3699cBa1cd4876Dc4D3d0E4f7ed05", // independent
+  NounsDescriptorV2: "0x09D0DdA0105a71b6afB742101f74Dd9F7144462d", // depends on SVGRenderer, NFTDescriptorV2
+  Inflator: "0x6d0ee7B5e40619Fb0fe951c3f271d8619F837948", // independent
+  NounsArt: "0xac57E3227647a8520F8446932afA62e0c94FDD4C", // depends on NounsDescriptorV2, Inflator
+  NounsSeeder: "0x1208263c7F80543D6fF2D47F5dFC59b9F1808605", // independent
+  NounsToken: "0xbD611f17E5C2079Ed2f63541C4A36fcc5670A962", // depends on NounsDescriptorV2, NounsSeeder, proxyRegistryAddress
+  NounsAuctionHouse: "0x27cDd2D25387De00f80feB0C3B0F5e61c7A3597b", // independent
+  NounsAuctionHouseProxyAdmin: "0xC633AEfde0835922d2a6EA2A7f6c4C4A461EdEee", // independent
+  NounsAuctionHouseProxy: "0xb70D1c202882624256E936bF6a4C4cf8331d19f3", // depdens on NounsAuctionHouse, NounsAuctionHouseProxyAdmin, NounsToken, args
+  NounsDAOV3DynamicQuorum: "0x7C003B5848f8C436960f31dEA703A94EE9C4e56F", // independent
+  NounsDAOV3Admin: "0x7e414cf781Ce1E275C72C6DC0edCd23B24b7fC72", // independent
+  NounsDAOV3Proposals: "0x7c77C4F5706BAdC2C29cbd571e8213A3DcA4584e", // independent
+  NounsDAOV3Votes: "0xC4C26096B3B4E65B2660B85D1B1aC60F0B8dCdf5", // independent
+  NounsDAOV3Fork: "0xe108079Afc4eECd47b0c74d234014c6bb3c5831d", // independent
+  NounsDAOLogicV3: "0xfc1Bd9C8e935D4F0a2d9a8A215c02A546f8C9F45", // depends on NounsDAOV3Admin, NounsDAOV3DynamicQuorum, NounsDAOV3Proposals, NounsDAOV3Votes, NounsDAOV3Fork
+  NounsDAOForkEscrow: "0x3315a66084155047066E655ca61DA4755B3C54a2", //depends on NounsDAOProxyV3, NounsToken
+  NounsTokenFork: "0xed50B071FE61B921fb302cDc0185b021f04515e4", // independent
+  NounsAuctionHouseFork: "0x5B1BD82E5C4Ea96D7d718d3Ea7cD1dd4bd8Ded72", // independent
+  NounsDAOLogicV1Fork: "0x8dB5d41724790215b3960FeD67B5961582aA27D6", // independent
+  NounsDAOExecutorV2: "0xaCbDa16a15d5186e5695DbB98a058Ab06F3FfFb5", // independent
+  NounsDAOExecutorProxy: "0x1576453AD934ADB556065853450813ae662b97F3", // depends on NounsDAOExecutorV2, NounsDAOProxyV3
+  ForkDAODeployer: "0x7797f17fa3Cd6ED9AD7D0aa2c0A8ce3E10F13764", // depends on NounsTokenFork, NounsAuctionHouseFork, NounsDAOLogicV1Fork, NounsDAOExecutorV2
+  NounsDAOProxyV3: "0x363D98d78CB26F85143f5c45a14D44159F146963", // depends on NounsDAOExecutorProxy, NounsToken, NounsDAOForkEscrow, ForkDAODeployer, args, NounsDAOLogicV3
+  NounsDAOData: "0xfE94d69917d781D3d5283a1534D6a224584495ee", // depends on NounsToken, NounsDAOProxyV3
+  NounsDAODataProxy: "0xf64957A9EEbB34c2C138a51A575978F3Dc72a1F7", // depends on NounsDaoDataABI, NounsDAOExecutorProxy, args, NounsDAOProxyV3
 }
 task('deploy-dao-v3', 'Deploy all Nouns contracts with short gov times for testing')
   .addFlag('autoDeploy', 'Deploy all contracts without user interaction')
@@ -159,7 +159,11 @@ task('deploy-dao-v3', 'Deploy all Nouns contracts with short gov times for testi
       args.weth = deployedWETHContract;
     }
 
-    const nonce = await deployer.getTransactionCount();
+    console.log(`deployer address is ${deployer.address}`)
+
+    /////////////////// getTransactionCount()が正しい値にならない場合は手動で設定する。
+    const nonce = 228;
+    // const nonce = await deployer.getTransactionCount();
     console.log(`current nonce is ${nonce}`)
 
     const deployment: Record<ContractNamesDAOV3, DeployedContract> = {} as Record<
@@ -412,8 +416,8 @@ task('deploy-dao-v3', 'Deploy all Nouns contracts with short gov times for testi
             },
           ),
         );
-        // ガス不足(Base gasだけで不足する)になるので、20%足す
-        const addGasPrice = gasPrice.div(BigNumber.from(5))
+        // ガス不足(Base gasだけで不足する)になるので、5%足す
+        const addGasPrice = gasPrice.div(BigNumber.from(20))
         gasPrice = gasPrice.add(addGasPrice)
         const deploymentCost = deploymentGas.mul(gasPrice);
 
@@ -477,7 +481,10 @@ task('deploy-dao-v3', 'Deploy all Nouns contracts with short gov times for testi
         contract.validateDeployment?.();
       }
 
+      console.log('----------------------------------------------------------')
       console.log(`${name} contract deployed to ${deployedContract.address}`);
+      console.log('----------------------------------------------------------')
+
     }
 
     return deployment;

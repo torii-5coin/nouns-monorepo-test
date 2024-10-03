@@ -1,0 +1,19 @@
+{
+  "network": "holesky",
+  "nounsToken": {
+    "address": "0xbD611f17E5C2079Ed2f63541C4A36fcc5670A962",
+    "startBlock": 2457724
+  },
+  "nounsAuctionHouse": {
+    "address": "0xb70D1c202882624256E936bF6a4C4cf8331d19f3",
+    "startBlock": 2457724
+  },
+  "nounsDAO": {
+    "address": "0x363D98d78CB26F85143f5c45a14D44159F146963",
+    "startBlock": -1
+  },
+  "nounsDAOData": {
+    "address": "0xf64957A9EEbB34c2C138a51A575978F3Dc72a1F7",
+    "startBlock": -1
+  }
+}

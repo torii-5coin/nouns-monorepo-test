@@ -102,7 +102,7 @@ task(
 
     // Mint for AirDrop only one time
 
-    const expectedNumAirDrops = 10;
+    const expectedNumAirDrops = 0;
     const totalSupply = (await contracts.NounsToken.instance.totalSupply()).toNumber();
     console.log(`totalSupply: ${totalSupply}`)
     const startIndex = totalSupply === 0 ? 0 : totalSupply - Math.floor(totalSupply / 10) + 1
