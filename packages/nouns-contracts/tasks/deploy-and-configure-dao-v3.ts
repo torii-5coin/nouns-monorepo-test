@@ -137,10 +137,10 @@ task(
 
     if (args.changeOwner) {
       console.log(`Setting a minter to ${contracts.NounsAuctionHouseProxy.instance.address}`);
-      const gasLimit = contracts.NounsToken.instance.estimateGas.mint();
+      const gasLimit = contracts.NounsToken.instance.estimateGas.setMinter(contracts.NounsAuctionHouseProxy.instance.address);
       let gasPrice = await ethers.provider.getGasPrice();
-      // ガス不足(Base gasだけで不足する)になるので、20%足す
-      const addGasPrice = gasPrice.div(ethers.BigNumber.from(5));
+      // ガス不足(Base gasだけで不足する)になるので、5%足す
+      const addGasPrice = gasPrice.div(ethers.BigNumber.from(20));
       gasPrice = gasPrice.add(addGasPrice);
       const options = {gasLimit, gasPrice};
       await contracts.NounsToken.instance.setMinter(contracts.NounsAuctionHouseProxy.instance.address, options);
