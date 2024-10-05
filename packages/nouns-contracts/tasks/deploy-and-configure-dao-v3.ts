@@ -102,7 +102,7 @@ task(
 
     // Mint for AirDrop only one time
 
-    const expectedNumAirDrops = 0;
+    const expectedNumAirDrops = 3;
     const totalSupply = (await contracts.NounsToken.instance.totalSupply()).toNumber();
     console.log(`totalSupply: ${totalSupply}`)
     const startIndex = totalSupply === 0 ? 0 : totalSupply - Math.floor(totalSupply / 10) + 1
@@ -121,8 +121,8 @@ task(
         console.log(`gasLimit: ${gasLimit}`)
 
         let gasPrice = await ethers.provider.getGasPrice();
-        // ガス不足(Base gasだけで不足する)になるので、20%足す
-        const addGasPrice = gasPrice.div(ethers.BigNumber.from(5));
+        // ガス不足(Base gasだけで不足する)になるので、5%足す
+        const addGasPrice = gasPrice.div(ethers.BigNumber.from(20));
         gasPrice = gasPrice.add(addGasPrice);
         console.log(`gasPrice: ${gasPrice}`)
 

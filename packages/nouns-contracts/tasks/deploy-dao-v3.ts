@@ -27,32 +27,32 @@ const wethContracts: Record<number, string> = {
 
 // *1: 再利用可能（参照される側なので使い回せる）
 const deployedContracts: Record<ContractNamesDAOV3, string> = {
-  NFTDescriptorV2: "0x40f6e77813CDFCd0AC705f16B9C51084837d94c1", // independent
-  SVGRenderer: "0xc0bfBC2516A3699cBa1cd4876Dc4D3d0E4f7ed05", // independent
-  NounsDescriptorV2: "0x09D0DdA0105a71b6afB742101f74Dd9F7144462d", // depends on SVGRenderer, NFTDescriptorV2
-  Inflator: "0x6d0ee7B5e40619Fb0fe951c3f271d8619F837948", // independent
-  NounsArt: "0xac57E3227647a8520F8446932afA62e0c94FDD4C", // depends on NounsDescriptorV2, Inflator
-  NounsSeeder: "0x1208263c7F80543D6fF2D47F5dFC59b9F1808605", // independent
-  NounsToken: "0xbD611f17E5C2079Ed2f63541C4A36fcc5670A962", // depends on NounsDescriptorV2, NounsSeeder, proxyRegistryAddress
-  NounsAuctionHouse: "0x27cDd2D25387De00f80feB0C3B0F5e61c7A3597b", // independent
-  NounsAuctionHouseProxyAdmin: "0xC633AEfde0835922d2a6EA2A7f6c4C4A461EdEee", // independent
-  NounsAuctionHouseProxy: "0xb70D1c202882624256E936bF6a4C4cf8331d19f3", // depdens on NounsAuctionHouse, NounsAuctionHouseProxyAdmin, NounsToken, args
-  NounsDAOV3DynamicQuorum: "0x7C003B5848f8C436960f31dEA703A94EE9C4e56F", // independent
-  NounsDAOV3Admin: "0x7e414cf781Ce1E275C72C6DC0edCd23B24b7fC72", // independent
-  NounsDAOV3Proposals: "0x7c77C4F5706BAdC2C29cbd571e8213A3DcA4584e", // independent
-  NounsDAOV3Votes: "0xC4C26096B3B4E65B2660B85D1B1aC60F0B8dCdf5", // independent
-  NounsDAOV3Fork: "0xe108079Afc4eECd47b0c74d234014c6bb3c5831d", // independent
-  NounsDAOLogicV3: "0xfc1Bd9C8e935D4F0a2d9a8A215c02A546f8C9F45", // depends on NounsDAOV3Admin, NounsDAOV3DynamicQuorum, NounsDAOV3Proposals, NounsDAOV3Votes, NounsDAOV3Fork
-  NounsDAOForkEscrow: "0x3315a66084155047066E655ca61DA4755B3C54a2", //depends on NounsDAOProxyV3, NounsToken
-  NounsTokenFork: "0xed50B071FE61B921fb302cDc0185b021f04515e4", // independent
-  NounsAuctionHouseFork: "0x5B1BD82E5C4Ea96D7d718d3Ea7cD1dd4bd8Ded72", // independent
-  NounsDAOLogicV1Fork: "0x8dB5d41724790215b3960FeD67B5961582aA27D6", // independent
-  NounsDAOExecutorV2: "0xaCbDa16a15d5186e5695DbB98a058Ab06F3FfFb5", // independent
-  NounsDAOExecutorProxy: "0x1576453AD934ADB556065853450813ae662b97F3", // depends on NounsDAOExecutorV2, NounsDAOProxyV3
-  ForkDAODeployer: "0x7797f17fa3Cd6ED9AD7D0aa2c0A8ce3E10F13764", // depends on NounsTokenFork, NounsAuctionHouseFork, NounsDAOLogicV1Fork, NounsDAOExecutorV2
-  NounsDAOProxyV3: "0x363D98d78CB26F85143f5c45a14D44159F146963", // depends on NounsDAOExecutorProxy, NounsToken, NounsDAOForkEscrow, ForkDAODeployer, args, NounsDAOLogicV3
-  NounsDAOData: "0xfE94d69917d781D3d5283a1534D6a224584495ee", // depends on NounsToken, NounsDAOProxyV3
-  NounsDAODataProxy: "0xf64957A9EEbB34c2C138a51A575978F3Dc72a1F7", // depends on NounsDaoDataABI, NounsDAOExecutorProxy, args, NounsDAOProxyV3
+  NFTDescriptorV2: "0x85713edfc54E40EC0d3bC9af38Bf28cd4eB7B14e", // independent
+  SVGRenderer: "0x81B9E78216Ba492bBF5a721709e988b6fA68A568", // independent
+  NounsDescriptorV2: "0xE6cCc2725E83b9d16980e3c21d9504226c58D595", // depends on SVGRenderer, NFTDescriptorV2
+  Inflator: "0xc8eCE48BeB342525aB8F19Ec25DF01a3943fa065", // independent
+  NounsArt: "0x3adE90547C5a60172CF78330733315b4Ca7DE71b", // depends on NounsDescriptorV2, Inflator
+  NounsSeeder: "0x520d319832cCB800B43c58B86Ae0F072410E0000", // independent
+  NounsToken: "0x5787FB90eFc0a3e37aF3FD5F6BDaCA9F8a02D015", // depends on NounsDescriptorV2, NounsSeeder, proxyRegistryAddress
+  NounsAuctionHouse: "0x6Edc790017111E959D5579675d85068a3eC5841c", // independent
+  NounsAuctionHouseProxyAdmin: "0x7b50a5654cf87F2aa0677D1216F8ba193ff1787b", // independent
+  NounsAuctionHouseProxy: "0x70C9686DAdCE27c91Dd0a89be51D3DBd9De6de23", // depdens on NounsAuctionHouse, NounsAuctionHouseProxyAdmin, NounsToken, args
+  NounsDAOV3DynamicQuorum: "0x566599e3fCDe54717e3540F127Df10cc6fAAb5C5", // independent
+  NounsDAOV3Admin: "0x02545E0F72e1B15877B442d8101BfaC07021f05F", // independent
+  NounsDAOV3Proposals: "0x988f253CE5f372C1426cE8d19AF1FD60963Ae9C4", // independent
+  NounsDAOV3Votes: "0x142f841900E67fb3F013c23C07102A13cb003ba5", // independent
+  NounsDAOV3Fork: "0x98e4A12f4140fBd7543896043b878E7e92465dAD", // independent
+  NounsDAOLogicV3: "0x69dea4b27AB2749C927cC6c9F666BC1605522f3A", // depends on NounsDAOV3Admin, NounsDAOV3DynamicQuorum, NounsDAOV3Proposals, NounsDAOV3Votes, NounsDAOV3Fork
+  NounsDAOForkEscrow: "0xD0b4092c70fEB94931aDF843bf057df8baB1b4ef", //depends on NounsDAOProxyV3, NounsToken
+  NounsTokenFork: "0x54eDe669FeBcA79d1ff7C9D486C0841b4785362F", // independent
+  NounsAuctionHouseFork: "0x6bFA97455d0FB0d6271cd686760684464481fd8b", // independent
+  NounsDAOLogicV1Fork: "0xdbb9582Ac25a18A52BC2DD32B74058Aa397be50B", // independent
+  NounsDAOExecutorV2: "0xB5FED52A8b907Ab24cE5D64d25E11bd3B6bc686c", // independent
+  NounsDAOExecutorProxy: "0x9ed9aF78ee112CE2778D9142C3a518379CCFE559", // depends on NounsDAOExecutorV2, NounsDAOProxyV3
+  ForkDAODeployer: "0x3087570081a729355B893DbC3e3231e39ab60ca8", // depends on NounsTokenFork, NounsAuctionHouseFork, NounsDAOLogicV1Fork, NounsDAOExecutorV2
+  NounsDAOProxyV3: "0x449ad0f89cA08E49813CcAB32519435581413afB", // depends on NounsDAOExecutorProxy, NounsToken, NounsDAOForkEscrow, ForkDAODeployer, args, NounsDAOLogicV3
+  NounsDAOData: "0x7F72Dca919F64ad1b2A2236e1E75c55758Dc2290", // depends on NounsToken, NounsDAOProxyV3
+  NounsDAODataProxy: "0xeD68fB4edB5B5b16b43D3046e7bade31711263A4", // depends on NounsDaoDataABI, NounsDAOExecutorProxy, args, NounsDAOProxyV3
 }
 task('deploy-dao-v3', 'Deploy all Nouns contracts with short gov times for testing')
   .addFlag('autoDeploy', 'Deploy all contracts without user interaction')
@@ -162,7 +162,7 @@ task('deploy-dao-v3', 'Deploy all Nouns contracts with short gov times for testi
     console.log(`deployer address is ${deployer.address}`)
 
     /////////////////// getTransactionCount()が正しい値にならない場合は手動で設定する。
-    const nonce = 228;
+    const nonce = 251;
     // const nonce = await deployer.getTransactionCount();
     console.log(`current nonce is ${nonce}`)
 
