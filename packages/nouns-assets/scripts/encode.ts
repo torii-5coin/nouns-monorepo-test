@@ -10,12 +10,16 @@ const encode = async () => {
 
   const partfolders = ['1-bodies', '2-accessories', '3-heads', '4-glasses'];
   for (const folder of partfolders) {
+    console.log('1------------------')
     const folderpath = path.join(__dirname, '../images/v0', folder);
+    console.log(`folderpath: ${folderpath}`)
     const files = await fs.readdir(folderpath);
     for (const file of files) {
-      console.log(`path: ${file}`)
+      console.log(`file: ${file}`)
       const image = await readPngImage(path.join(folderpath, file));
+      console.log('starting------------------')
       encoder.encodeImage(file.replace(/\.png$/, ''), image, folder.replace(/^\d-/, ''));
+      console.log('finished ------------------')
     }
   }
   await fs.writeFile(

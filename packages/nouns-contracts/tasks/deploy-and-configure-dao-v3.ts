@@ -102,7 +102,7 @@ task(
 
     // Mint for AirDrop only one time
 
-    const expectedNumAirDrops = 3;
+    const expectedNumAirDrops = 0;
     const totalSupply = (await contracts.NounsToken.instance.totalSupply()).toNumber();
     console.log(`totalSupply: ${totalSupply}`)
     const startIndex = totalSupply === 0 ? 0 : totalSupply - Math.floor(totalSupply / 10) + 1
@@ -150,11 +150,13 @@ task(
     // We must maintain ownership of the auction house to kick off the first auction.
     const isOwnerOf = async (contract: Contract, owner: string) => {
       const ownerOfContract = await contract.owner();
+      console.log(`the owner to check: ${owner}, the owner of the contract: ${ownerOfContract}`)
       return ownerOfContract === owner;
     }
     const executorAddress = contracts.NounsDAOExecutorProxy.instance.address;
 
     if (args.changeOwner) {
+      console.log(`Checking the owner address of executor address ${executorAddress}`)
       if (!(await isOwnerOf(contracts.NounsDescriptorV2.instance, executorAddress))) {
         await contracts.NounsDescriptorV2.instance.transferOwnership(executorAddress);
         console.log(
@@ -185,10 +187,10 @@ task(
         gasLimit: 1_000_000,
       });
       console.log('Started the first auction.');
-    }
-    if (args.changeOwner) {
-      await auctionHouse.transferOwnership(executorAddress);
-      console.log('Transferred ownership of the auction house to the executor.');
+      if (args.changeOwner) {
+        await auctionHouse.transferOwnership(executorAddress);
+        console.log('Transferred ownership of the auction house to the executor.');
+      }
     }
 
     // Optionally write the deployed addresses to the SDK and subgraph configs.
