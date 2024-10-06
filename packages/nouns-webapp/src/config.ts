@@ -91,7 +91,7 @@ const app: Record<SupportedChains, AppConfig> = {
     jsonRpcUri: createNetworkHttpUrl('holesky'),
     wsRpcUri: createNetworkWsUrl('holesky'),
     subgraphApiUri:
-      'https://api.goldsky.com/api/public/project_clrblkohp8nlx01q7evjz0x5h/subgraphs/ubuyama-holesky/v0.0.1/gn',
+      'https://api.goldsky.com/api/public/project_clrblkohp8nlx01q7evjz0x5h/subgraphs/ubuyama-holesky/v0.0.3/gn',
     enableHistory: process.env.REACT_APP_ENABLE_HISTORY === 'true',
     exploreUri: 'https://testnets.opensea.io/collection/asoubuyama-nouns-2',
     nounder_address: '0xEB0BAfB81f157a72eF61F123764F572452B496A4',

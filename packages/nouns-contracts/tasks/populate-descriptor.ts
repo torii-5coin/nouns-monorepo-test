@@ -51,6 +51,7 @@ task('populate-descriptor', 'Populates the descriptor with color palettes and No
     }
 
     const bodyCount = await descriptorContract.bodyCount();
+    console.log(`bodyCount: ${bodyCount}`)
     if (bodyCount.isZero()) {
       await descriptorContract.addBodies(
         bodiesPage.encodedCompressed,
@@ -62,6 +63,7 @@ task('populate-descriptor', 'Populates the descriptor with color palettes and No
     }
 
     const headCount = await descriptorContract.headCount();
+    console.log(`headCount: ${headCount}`)
     if (headCount.isZero()) {
       await descriptorContract.addHeads(
           headsPage.encodedCompressed,
@@ -73,6 +75,7 @@ task('populate-descriptor', 'Populates the descriptor with color palettes and No
     }
 
     const glassesCount = await descriptorContract.glassesCount();
+    console.log(`glassesCount: ${glassesCount}`)
     if (glassesCount.isZero()) {
       await descriptorContract.addGlasses(
           glassesPage.encodedCompressed,
@@ -84,6 +87,7 @@ task('populate-descriptor', 'Populates the descriptor with color palettes and No
     }
 
     const accessoryCount = await descriptorContract.accessoryCount();
+    console.log(`accessoryCount: ${accessoryCount}`)
     if (accessoryCount.isZero()) {
       await descriptorContract.addAccessories(
           accessoriesPage.encodedCompressed,

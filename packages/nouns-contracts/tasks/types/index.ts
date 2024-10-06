@@ -65,6 +65,8 @@ export interface DeployedContract {
   instance: Contract;
   constructorArguments: (string | number)[];
   libraries: Record<string, string>;
+  isNew?: boolean,
+  deployedContracts?: {[key: string]: string}
 }
 
 export interface ContractRow {
