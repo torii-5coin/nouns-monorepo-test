@@ -1,12 +1,14 @@
 import { ChainId } from '@usedapp/core';
-import { CHAIN_ID, ChainId_Sepolia, ETHERSCAN_API_KEY } from '../config';
+import { CHAIN_ID, ChainId_Sepolia, ChainId_Holesky, ETHERSCAN_API_KEY } from '../config';
 
-const getBaseURL = (network: ChainId) => {
+const getBaseURL = (network: ChainId | number) => {
   switch (network) {
     case ChainId.Goerli:
       return 'https://goerli.etherscan.io/';
     case ChainId.Sepolia:
       return 'https://sepolia.etherscan.io/';
+    case ChainId_Holesky:
+      return 'https://holesky.etherscan.io/';
     default:
       return 'https://etherscan.io/';
   }
@@ -40,6 +42,8 @@ const getApiBaseURL = (network: number) => {
       return 'https://api-goerli.etherscan.io/';
     case ChainId_Sepolia:
       return 'https://api-sepolia.etherscan.io/';
+    case ChainId_Holesky:
+      return 'https://api-holesky.etherscan.io/';
     default:
       return 'https://api.etherscan.io/';
   }

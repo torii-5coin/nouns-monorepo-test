@@ -136,13 +136,13 @@ const externalAddresses: Record<SupportedChains, ExternalContractAddresses> = {
   },
   [ChainId_Holesky]: {
     lidoToken: undefined,
-    usdcToken: '0xEbCC972B6B3eB15C0592BE1871838963d0B94278',
+    usdcToken: undefined,
     weth: '0x0014e5C0B28dfFFb02D0B1A7d6aE2eAEde19d577',
     steth: undefined,
-    payerContract: '0x5a2A0951C6b3479DBEe1D5909Aac7B325d300D94',
-    tokenBuyer: '0x821176470cFeF1dB78F1e2dbae136f73c36ddd48',
-    chainlinkEthUsdc: '0x694AA1769357215DE4FAC081bf1f309aDC325306',
-    nounsStreamFactory: '0xb78ccF3BD015f209fb9B2d3d132FD8784Df78DF5',
+    payerContract: undefined,
+    tokenBuyer: undefined,
+    chainlinkEthUsdc: undefined,
+    nounsStreamFactory: undefined,
   },
   [ChainId.Mainnet]: {
     lidoToken: '0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84',

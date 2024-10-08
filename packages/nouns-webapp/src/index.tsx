@@ -125,7 +125,7 @@ const useDappConfig = {
   multicallAddresses: {
     [ChainId.Hardhat]: multicallOnLocalhost,
   },
-  networks: [...DEFAULT_SUPPORTED_CHAINS, Sepolia],
+  networks: [...DEFAULT_SUPPORTED_CHAINS, Sepolia, Holesky],
 };
 
 const client = clientFactory(config.app.subgraphApiUri);
