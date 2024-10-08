@@ -177,7 +177,7 @@ task('deploy-dao-v3', 'Deploy all Nouns contracts with short gov times for testi
       },
     ]);
 
-    const nonce = nonceInput.nonce
+    const nonce = nonceInput.nonce as number
     // const nonce = 347;
     // const nonce = await deployer.getTransactionCount();
     console.log(`current nonce is ${nonce}`)
