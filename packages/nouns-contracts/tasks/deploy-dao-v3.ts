@@ -27,32 +27,32 @@ const wethContracts: Record<number, string> = {
 
 // *1: 再利用可能（参照される側なので使い回せる）
 const deployedContracts: Record<ContractNamesDAOV3, string> = {
-  NFTDescriptorV2: "0x85713edfc54E40EC0d3bC9af38Bf28cd4eB7B14e", // independent
-  SVGRenderer: "0x81B9E78216Ba492bBF5a721709e988b6fA68A568", // independent
-  NounsDescriptorV2: "0xE6cCc2725E83b9d16980e3c21d9504226c58D595", // depends on SVGRenderer, NFTDescriptorV2
-  Inflator: "0xc8eCE48BeB342525aB8F19Ec25DF01a3943fa065", // independent
-  NounsArt: "0x3adE90547C5a60172CF78330733315b4Ca7DE71b", // depends on NounsDescriptorV2, Inflator
-  NounsSeeder: "0x520d319832cCB800B43c58B86Ae0F072410E0000", // independent
-  NounsToken: "0x5787FB90eFc0a3e37aF3FD5F6BDaCA9F8a02D015", // depends on NounsDescriptorV2, NounsSeeder, proxyRegistryAddress
-  NounsAuctionHouse: "0x6Edc790017111E959D5579675d85068a3eC5841c", // independent
-  NounsAuctionHouseProxyAdmin: "0x7b50a5654cf87F2aa0677D1216F8ba193ff1787b", // independent
-  NounsAuctionHouseProxy: "0x70C9686DAdCE27c91Dd0a89be51D3DBd9De6de23", // depdens on NounsAuctionHouse, NounsAuctionHouseProxyAdmin, NounsToken, args
-  NounsDAOV3DynamicQuorum: "0x566599e3fCDe54717e3540F127Df10cc6fAAb5C5", // independent
-  NounsDAOV3Admin: "0x02545E0F72e1B15877B442d8101BfaC07021f05F", // independent
-  NounsDAOV3Proposals: "0x988f253CE5f372C1426cE8d19AF1FD60963Ae9C4", // independent
-  NounsDAOV3Votes: "0x142f841900E67fb3F013c23C07102A13cb003ba5", // independent
-  NounsDAOV3Fork: "0x98e4A12f4140fBd7543896043b878E7e92465dAD", // independent
-  NounsDAOLogicV3: "0x69dea4b27AB2749C927cC6c9F666BC1605522f3A", // depends on NounsDAOV3Admin, NounsDAOV3DynamicQuorum, NounsDAOV3Proposals, NounsDAOV3Votes, NounsDAOV3Fork
-  NounsDAOForkEscrow: "0xD0b4092c70fEB94931aDF843bf057df8baB1b4ef", //depends on NounsDAOProxyV3, NounsToken
-  NounsTokenFork: "0x54eDe669FeBcA79d1ff7C9D486C0841b4785362F", // independent
-  NounsAuctionHouseFork: "0x6bFA97455d0FB0d6271cd686760684464481fd8b", // independent
-  NounsDAOLogicV1Fork: "0xdbb9582Ac25a18A52BC2DD32B74058Aa397be50B", // independent
-  NounsDAOExecutorV2: "0xB5FED52A8b907Ab24cE5D64d25E11bd3B6bc686c", // independent
-  NounsDAOExecutorProxy: "0x9ed9aF78ee112CE2778D9142C3a518379CCFE559", // depends on NounsDAOExecutorV2, NounsDAOProxyV3
-  ForkDAODeployer: "0x3087570081a729355B893DbC3e3231e39ab60ca8", // depends on NounsTokenFork, NounsAuctionHouseFork, NounsDAOLogicV1Fork, NounsDAOExecutorV2
-  NounsDAOProxyV3: "0x449ad0f89cA08E49813CcAB32519435581413afB", // depends on NounsDAOExecutorProxy, NounsToken, NounsDAOForkEscrow, ForkDAODeployer, args, NounsDAOLogicV3
-  NounsDAOData: "0x7F72Dca919F64ad1b2A2236e1E75c55758Dc2290", // depends on NounsToken, NounsDAOProxyV3
-  NounsDAODataProxy: "0xeD68fB4edB5B5b16b43D3046e7bade31711263A4", // depends on NounsDaoDataABI, NounsDAOExecutorProxy, args, NounsDAOProxyV3
+  NFTDescriptorV2: "", // affects on NounsDescriptorV2
+  SVGRenderer: "", // affects on NounsDescriptorV2
+  NounsDescriptorV2: "", // affects on NounsArt, NounsToken
+  Inflator: "", // affects on NounsArt
+  NounsArt: "", // affects on NounsDescriptorV2
+  NounsSeeder: "", // affects on NounsToken
+  NounsToken: "", // affects on NounsAuctionHouseProxy, NounsDAOForkEscrow, NounsDAOProxyV3, NounsDAOData
+  NounsAuctionHouse: "", // affects on NounsAuctionHouseProxy
+  NounsAuctionHouseProxyAdmin: "", // affects on NounsAuctionHouseProxy
+  NounsAuctionHouseProxy: "", // affects on NounsAuctionHouse
+  NounsDAOV3DynamicQuorum: "", // affects on NounsDAOLogicV3
+  NounsDAOV3Admin: "", // affects on NounsDAOLogicV3
+  NounsDAOV3Proposals: "", // affects on NounsDAOLogicV3
+  NounsDAOV3Votes: "", // affects on NounsDAOLogicV3
+  NounsDAOV3Fork: "", // affects on NounsDAOLogicV3
+  NounsDAOLogicV3: "", // affects on NounsDAOProxyV3
+  NounsDAOForkEscrow: "", // affects on NounsDAOProxyV3
+  NounsTokenFork: "", // affects on ForkDAODeployer
+  NounsAuctionHouseFork: "", // affects on ForkDAODeployer
+  NounsDAOLogicV1Fork: "", // affects on ForkDAODeployer
+  NounsDAOExecutorV2: "", // affects on NounsDAOExecutorProxy, ForkDAODeployer
+  NounsDAOExecutorProxy: "", // affects on NounsDAOProxyV3, NounsDAODataProxy
+  ForkDAODeployer: "", // affects on NounsDAOProxyV3
+  NounsDAOProxyV3: "", // affects on NounsDAOForkEscrow, NounsDAOExecutorProxy, NounsDAOData, NounsDAODataProxy
+  NounsDAOData: "", // affects on
+  NounsDAODataProxy: "", // affects on
 }
 task('deploy-dao-v3', 'Deploy all Nouns contracts with short gov times for testing')
   .addFlag('autoDeploy', 'Deploy all contracts without user interaction')
@@ -162,7 +162,23 @@ task('deploy-dao-v3', 'Deploy all Nouns contracts with short gov times for testi
     console.log(`deployer address is ${deployer.address}`)
 
     /////////////////// getTransactionCount()が正しい値にならない場合は手動で設定する。
-    const nonce = 251;
+    promptjs.start();
+
+    const nonceInput = await promptjs.get([
+      {
+        properties: {
+          nonce: {
+            type: 'integer',
+            required: true,
+            description: 'Enter a nonce',
+            default: await deployer.getTransactionCount(),
+          },
+        },
+      },
+    ]);
+
+    const nonce = nonceInput.nonce
+    // const nonce = 347;
     // const nonce = await deployer.getTransactionCount();
     console.log(`current nonce is ${nonce}`)
 
@@ -364,6 +380,7 @@ task('deploy-dao-v3', 'Deploy all Nouns contracts with short gov times for testi
 
     for (const [name, contract] of Object.entries(contracts)) {
       let gasPrice = await ethers.provider.getGasPrice();
+      let isNew = false
       if (!args.autoDeploy) {
         const gasInGwei = Math.round(Number(ethers.utils.formatUnits(gasPrice, 'gwei')));
 
@@ -407,6 +424,9 @@ task('deploy-dao-v3', 'Deploy all Nouns contracts with short gov times for testi
       if (contractAddress?.startsWith('0x')) {
         deployedContract = await factory.attach(contractAddress);
         console.log(`Contract already deployed is ${deployedContract.address}`)
+        if (name ==='NounsDescriptorV2') {
+          console.log(`deployedContract.glasses(10): ${await deployedContract.glasses(10)}`)
+        }
       } else {
         const deploymentGas = await factory.signer.estimateGas(
           factory.getDeployTransaction(
@@ -460,6 +480,7 @@ task('deploy-dao-v3', 'Deploy all Nouns contracts with short gov times for testi
         if (contract.waitForConfirmation) {
           await deployedContract.deployed();
           console.log(`Contract has just deployed!`)
+          isNew = true
         }
         console.log(`Contract is ${deployedContract.address}`)
         console.log(`Tx hash is ${deployedContract.deployTransaction.hash}`)
@@ -475,6 +496,8 @@ task('deploy-dao-v3', 'Deploy all Nouns contracts with short gov times for testi
         address: deployedContract.address,
         constructorArguments: contract.args?.map(a => (typeof a === 'function' ? a() : a)) ?? [],
         libraries: contract?.libraries?.() ?? {},
+        isNew,
+        deployedContracts
       };
 
       if (!contractAddress?.startsWith('0x')) {

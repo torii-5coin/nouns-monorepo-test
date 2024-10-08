@@ -1,6 +1,7 @@
 import { task, types } from 'hardhat/config';
 import { printContractsTable } from './utils';
 import { Contract } from 'ethers'
+import {DeployedContract} from "./types";
 
 task(
   'deploy-and-configure-dao-v3',
@@ -90,19 +91,29 @@ task(
     const contracts = await run('deploy-dao-v3', args);
 
     // Verify the contracts on Etherscan
-    await run('verify-etherscan-dao-v3', {
-      contracts,
-    });
+    // 一つでも新規作成されていた場合は実行
+    if (Object.entries(contracts).some(([_, v]) => v.isNew)) {
+      await run('verify-etherscan-dao-v3', {
+        contracts,
+      });
+    } else {
+      console.log('Skipping verifying because all contracts were verified.')
+    }
 
     // Populate the on-chain art
-    await run('populate-descriptor', {
-      nftDescriptor: contracts.NFTDescriptorV2.address,
-      nounsDescriptor: contracts.NounsDescriptorV2.address,
-    });
+    // NounsDescriptorV2Ownerが新規作成されたタイミングしか実行しない
+    if (contracts['NounsDescriptorV2'].isNew) {
+      await run('populate-descriptor', {
+        nftDescriptor: contracts.NFTDescriptorV2.address,
+        nounsDescriptor: contracts.NounsDescriptorV2.address,
+      });
+    } else {
+      console.log('Skipped populate-descriptor')
+    }
 
     // Mint for AirDrop only one time
 
-    const expectedNumAirDrops = 3;
+    const expectedNumAirDrops = 0;
     const totalSupply = (await contracts.NounsToken.instance.totalSupply()).toNumber();
     console.log(`totalSupply: ${totalSupply}`)
     const startIndex = totalSupply === 0 ? 0 : totalSupply - Math.floor(totalSupply / 10) + 1
@@ -136,38 +147,49 @@ task(
     }
 
     if (args.changeOwner) {
-      console.log(`Setting a minter to ${contracts.NounsAuctionHouseProxy.instance.address}`);
-      const gasLimit = contracts.NounsToken.instance.estimateGas.setMinter(contracts.NounsAuctionHouseProxy.instance.address);
-      let gasPrice = await ethers.provider.getGasPrice();
-      // ガス不足(Base gasだけで不足する)になるので、5%足す
-      const addGasPrice = gasPrice.div(ethers.BigNumber.from(20));
-      gasPrice = gasPrice.add(addGasPrice);
-      const options = {gasLimit, gasPrice};
-      await contracts.NounsToken.instance.setMinter(contracts.NounsAuctionHouseProxy.instance.address, options);
+      console.log(`Checking the minter address...`)
+      const nounsTokenMinter = await contracts.NounsToken.instance.minter()
+      const nounsAuctionHouseProxyAddress = contracts.NounsAuctionHouseProxy.instance.address
+      console.log(`nounsTokenMinter: ${nounsTokenMinter}, nounsAuctionHouseProxyAddress: ${nounsAuctionHouseProxyAddress}`)
+      if (nounsTokenMinter !== nounsAuctionHouseProxyAddress) {
+        console.log(`Setting a minter to ${nounsAuctionHouseProxyAddress}`);
+        const gasLimit = contracts.NounsToken.instance.estimateGas.setMinter(nounsAuctionHouseProxyAddress);
+        let gasPrice = await ethers.provider.getGasPrice();
+        // ガス不足(Base gasだけで不足する)になるので、5%足す
+        const addGasPrice = gasPrice.div(ethers.BigNumber.from(20));
+        gasPrice = gasPrice.add(addGasPrice);
+        const options = {gasLimit, gasPrice};
+        await contracts.NounsToken.instance.setMinter(nounsAuctionHouseProxyAddress, options);
+      }
     }
 
-    // Transfer ownership of all contract except for the auction house.
+    // // Transfer ownership of all contract except for the auction house.
     // We must maintain ownership of the auction house to kick off the first auction.
     const isOwnerOf = async (contract: Contract, owner: string) => {
-      const ownerOfContract = await contract.owner();
+      // データがおかしい時にこれを呼ぶと治るっぽい
+      await contract.instance.owner
+      console.log(`target contract: ${contract.address}`)
+      const ownerOfContract = await contract.instance.owner();
+      console.log(`the owner to check: ${owner}, the owner of the contract: ${ownerOfContract}`)
       return ownerOfContract === owner;
     }
     const executorAddress = contracts.NounsDAOExecutorProxy.instance.address;
 
     if (args.changeOwner) {
-      if (!(await isOwnerOf(contracts.NounsDescriptorV2.instance, executorAddress))) {
+      console.log(`Checking the owner address of executor address ${executorAddress}`)
+      if (!(await isOwnerOf(contracts.NounsDescriptorV2, executorAddress))) {
         await contracts.NounsDescriptorV2.instance.transferOwnership(executorAddress);
         console.log(
           'Transferred ownership of the NounsDescriptorV2 to the executor.',
         );
       }
-      if (!(await isOwnerOf(contracts.NounsToken.instance, executorAddress))) {
+      if (!(await isOwnerOf(contracts.NounsToken, executorAddress))) {
         await contracts.NounsToken.instance.transferOwnership(executorAddress);
         console.log(
             'Transferred ownership of the NounsToken to the executor.',
         );
       }
-      if (!(await isOwnerOf(contracts.NounsAuctionHouseProxyAdmin.instance, executorAddress))) {
+      if (!(await isOwnerOf(contracts.NounsAuctionHouseProxyAdmin, executorAddress))) {
         await contracts.NounsAuctionHouseProxyAdmin.instance.transferOwnership(executorAddress);
         console.log(
             'Transferred ownership of the NounsAuctionHouseProxyAdmin to the executor.',
@@ -185,10 +207,10 @@ task(
         gasLimit: 1_000_000,
       });
       console.log('Started the first auction.');
-    }
-    if (args.changeOwner) {
-      await auctionHouse.transferOwnership(executorAddress);
-      console.log('Transferred ownership of the auction house to the executor.');
+      if (args.changeOwner) {
+        await auctionHouse.transferOwnership(executorAddress);
+        console.log('Transferred ownership of the auction house to the executor.');
+      }
     }
 
     // Optionally write the deployed addresses to the SDK and subgraph configs.
