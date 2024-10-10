@@ -1,7 +1,7 @@
 import { task, types } from 'hardhat/config';
 import { printContractsTable } from './utils';
 import { Contract } from 'ethers'
-import {DeployedContract} from "./types";
+import {ContractNamesDAOV3, DeployedContract} from "./types";
 
 task(
   'deploy-and-configure-dao-v3',
@@ -92,7 +92,7 @@ task(
 
     // Verify the contracts on Etherscan
     // 一つでも新規作成されていた場合は実行
-    if (Object.entries(contracts).some(([_, v]) => v.isNew)) {
+    if (Object.entries(contracts).some(([_, v]) => (v as DeployedContract).isNew)) {
       await run('verify-etherscan-dao-v3', {
         contracts,
       });

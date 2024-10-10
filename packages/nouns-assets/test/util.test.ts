@@ -5,7 +5,8 @@ import {
   getPseudorandomPart,
   getNounSeedFromBlockHash,
   getNounData,
-} from '../src/index';
+} from '../src';
+// @ts-ignore
 import { images } from '../src/image-data.json';
 import { NounSeed } from '../src/types';
 

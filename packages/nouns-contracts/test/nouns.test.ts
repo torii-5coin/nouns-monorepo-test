@@ -113,6 +113,10 @@ describe('NounsToken', () => {
   });
 
   describe('contractURI', async () => {
+    it('should start with data:application/json;base64,', async () => {
+      const contractURI = await nounsToken.contractURI();
+      expect(contractURI).to.match(/^data:application\/json;base64,.+$/);
+    });
     it('should have required params', async () => {
       const contractURI = await nounsToken.contractURI();
       const base64Str = contractURI.replace(/^data:application\/json;base64,/, '')
