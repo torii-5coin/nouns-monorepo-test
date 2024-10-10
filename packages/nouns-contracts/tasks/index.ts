@@ -32,3 +32,4 @@ export * from './verify-etherscan-dao-v3';
 export * from './update-configs-dao-v3';
 export * from './deploy-dao-v3';
 export * from './deploy-and-configure-dao-v3';
+export * from './encode-contract-uri-in-json';

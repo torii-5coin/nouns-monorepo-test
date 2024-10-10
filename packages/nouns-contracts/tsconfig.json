@@ -10,7 +10,7 @@
     "./files/*.json"
   ],
   "exclude": ["./test/foundry/**"],
-  "files": ["./hardhat.config.ts"],
+  "files": ["./hardhat.config.ts", "./contract-uri.json"],
   "references": [
     {
       "path": "../nouns-assets/tsconfig.build.json"

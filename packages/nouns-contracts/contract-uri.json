@@ -1,7 +1,7 @@
 {
   "name": "AsoUbuyama Nouns",
   "description": "One AsoUbuyama Noun, every day, forever.\r\n\r\nAsoUbuyama Nouns DAO is an official Nounish DAO of Ubuyama village in Japan.\r\n\r\naso-ubuyama-nouns.wtf",
-  "image": "ipfs://bafkreicrcvjf6mvmrtunnuo6xr3vmdle4lrxettiaohijowdxk33yftbte",
+  "image": "https://aso-ubuyama-nouns.wtf/ubuyama_sonshou.png",
   "external_link": "https://aso-ubuyama-nouns.wtf",
   "seller_fee_basis_points": 0,
   "fee_recipient": "0x0000000000000000000000000000000000000000"

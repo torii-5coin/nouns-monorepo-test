@@ -20,6 +20,7 @@
     "task:mint-noun": "npx hardhat mint-noun",
     "task:populate-descriptor": "npx hardhat populate-descriptor",
     "task:populate-descriptor-add-new-images": "npx hardhat populate-descriptor-add-new-images",
+    "task:encode-contract-uri-in-json": "npx hardhat encode-contract-uri-in-json",
     "task:run-local": "npx hardhat run-local",
     "test": "npx hardhat test",
     "coverage": "npx hardhat coverage",

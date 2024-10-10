@@ -5,6 +5,7 @@ import { solidity } from 'ethereum-waffle';
 import { NounsDescriptorV2__factory as NounsDescriptorV2Factory, NounsToken } from '../typechain';
 import { deployNounsToken, populateDescriptorV2 } from './utils';
 import { SignerWithAddress } from '@nomiclabs/hardhat-ethers/signers';
+import ContractUri from '../contract-uri.json'
 
 chai.use(solidity);
 const { expect } = chai;
@@ -112,18 +113,21 @@ describe('NounsToken', () => {
   });
 
   describe('contractURI', async () => {
-    it('should return correct contractURI', async () => {
-      expect(await nounsToken.contractURI()).to.eq(
-        'ipfs://bafkreih7poqtzcpbneyf6zrqawf5ltqhx6tqfnmxknimktlh5y7c5ngs6m',
-      );
+    it('should have required params', async () => {
+      const contractURI = await nounsToken.contractURI();
+      const base64Str = contractURI.replace(/^data:application\/json;base64,/, '')
+      const contractURIObj = JSON.parse(Buffer.from(base64Str, 'base64').toString('utf-8'))
+      const requiredKeys = ['name', 'description', 'image', 'external_link', 'seller_fee_basis_points', 'fee_recipient']
+      expect(contractURIObj).to.have.keys(requiredKeys);
     });
+    const encodedContractURI = 'eyJuYW1lIjoiQXNvVWJ1eWFtYSBOb3VucyIsImRlc2NyaXB0aW9uIjoiT25lIEFzb1VidXlhbWEgTm91biwgZXZlcnkgZGF5LCBmb3JldmVyLlxyXG5cclxuQXNvVWJ1eWFtYSBOb3VucyBEQU8gaXMgYW4gb2ZmaWNpYWwgTm91bmlzaCBEQU8gb2YgVWJ1eWFtYSB2aWxsYWdlIGluIEphcGFuLlxyXG5cclxuYXNvLXVidXlhbWEtbm91bnMud3RmIiwiaW1hZ2UiOiJodHRwczovL2Fzby11YnV5YW1hLW5vdW5zLnd0Zi91YnV5YW1hX3NvbnNob3UucG5nIiwiZXh0ZXJuYWxfbGluayI6Imh0dHBzOi8vYXNvLXVidXlhbWEtbm91bnMud3RmIiwic2VsbGVyX2ZlZV9iYXNpc19wb2ludHMiOjAsImZlZV9yZWNpcGllbnQiOiIweDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAifQ=='
     it('should allow owner to set contractURI', async () => {
-      await nounsToken.setContractURIHash('ABC123');
-      expect(await nounsToken.contractURI()).to.eq('ipfs://ABC123');
+      await nounsToken.setContractURI(encodedContractURI);
+      expect(await nounsToken.contractURI()).to.eq(encodedContractURI);
     });
     it('should not allow non owner to set contractURI', async () => {
       const [, nonOwner] = await ethers.getSigners();
-      await expect(nounsToken.connect(nonOwner).setContractURIHash('BAD')).to.be.revertedWith(
+      await expect(nounsToken.connect(nonOwner).setContractURI(encodedContractURI)).to.be.revertedWith(
         'Ownable: caller is not the owner',
       );
     });
