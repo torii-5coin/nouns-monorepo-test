@@ -84,7 +84,7 @@ const app: Record<SupportedChains, AppConfig> = {
     subgraphApiUri:
       'https://api.goldsky.com/api/public/project_clrblkohp8nlx01q7evjz0x5h/subgraphs/ubuyama-sepolia/v0.0.2/gn',
     enableHistory: process.env.REACT_APP_ENABLE_HISTORY === 'true',
-    exploreUri: 'https://testnets.opensea.io/collection/asoubuyama-nouns-2',
+    exploreUri: 'https://testnets.opensea.io/collection/asoubuyama-nouns-6',
     nounder_address: '0x1AeB1E02E734a4797F3e2D1f96b645259E20D684',
   },
   [ChainId_Holesky]: {
