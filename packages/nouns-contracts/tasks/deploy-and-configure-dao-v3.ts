@@ -1,7 +1,6 @@
 import { task, types } from 'hardhat/config';
 import { printContractsTable } from './utils';
 import { Contract } from 'ethers'
-import {ContractNamesDAOV3, DeployedContract} from "./types";
 
 task(
   'deploy-and-configure-dao-v3',
@@ -132,8 +131,8 @@ task(
         console.log(`gasLimit: ${gasLimit}`)
 
         let gasPrice = await ethers.provider.getGasPrice();
-        // ガス不足(Base gasだけで不足する)になるので、5%足す
-        const addGasPrice = gasPrice.div(ethers.BigNumber.from(20));
+        // ガス不足(Base gasだけで不足する)になるので、10%足す
+        const addGasPrice = gasPrice.div(ethers.BigNumber.from(10));
         gasPrice = gasPrice.add(addGasPrice);
         console.log(`gasPrice: ${gasPrice}`)
 
@@ -155,8 +154,8 @@ task(
         console.log(`Setting a minter to ${nounsAuctionHouseProxyAddress}`);
         const gasLimit = contracts.NounsToken.instance.estimateGas.setMinter(nounsAuctionHouseProxyAddress);
         let gasPrice = await ethers.provider.getGasPrice();
-        // ガス不足(Base gasだけで不足する)になるので、5%足す
-        const addGasPrice = gasPrice.div(ethers.BigNumber.from(20));
+        // ガス不足(Base gasだけで不足する)になるので、10%足す
+        const addGasPrice = gasPrice.div(ethers.BigNumber.from(10));
         gasPrice = gasPrice.add(addGasPrice);
         const options = {gasLimit, gasPrice};
         await contracts.NounsToken.instance.setMinter(nounsAuctionHouseProxyAddress, options);

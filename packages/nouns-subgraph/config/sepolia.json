@@ -1,19 +1,19 @@
 {
-  "network": "unknown",
+  "network": "sepolia",
   "nounsToken": {
-    "address": "0x021aBF32D9BdE1843BE11Bb5f43170D6eC9B7D0B",
-    "startBlock": 6840493
+    "address": "0x84a1F30Ff94F63cd9dBEd4002D14fc009c4bc0A1",
+    "startBlock": 6890855
   },
   "nounsAuctionHouse": {
-    "address": "0xf4D895F3E21e3551490c82ed982b063Adc9aB043",
-    "startBlock": 6840494
+    "address": "0xf63Bc2546606a6459561f9ca4a55B3B52f89bC2b",
+    "startBlock": 6890856
   },
   "nounsDAO": {
-    "address": "0x1f81Ff878B70DA9A9e3af243d2f87Bcf3280f619",
-    "startBlock": 6840499
+    "address": "0xAcCD16Cb2a1436CAF3157C313c0295394621bA2C",
+    "startBlock": 6890862
   },
   "nounsDAOData": {
-    "address": "0x0eF9DFf9828F49859553cc3b2935eC994838BB22",
-    "startBlock": 6840501
+    "address": "0x772D9c1e82d92D80712BFFABfB7E12F9B2366C69",
+    "startBlock": 6890864
   }
 }
