@@ -775,8 +775,8 @@ msgid "Gas spent on voting will be refunded to you."
 msgstr ""
 
 #: src/pages/Playground/index.tsx
-msgid "Generate Nouns"
-msgstr "Nounsを作る"
+msgid "Generate AsoUbuyama Nouns"
+msgstr "AsoUbuyama Nounsを作る"
 
 #: src/components/ExploreGrid/ExploreNounDetail/index.tsx
 #: src/pages/Playground/index.tsx
@@ -968,8 +968,8 @@ msgid "AsoUbuyama Nouns DAO utilizes a fork of {compoundGovLink} and is the main
 msgstr "AsoUbuyama Nouns DAOは {compoundGovLink} のフォークを利用しており、AsoUbuyama Nounsエコシステムの主要な統治機関です。毎日起こるAsoUbuyama Nounオークションから得られるETHの収益の100％はAsoUbuyama Nouns DAO トレジャリーにて受け取られています。各AsoUbuyama NounはAsoUbuyama Nouns DAOの変更不可能なメンバーであり、すべてのガバナンスの問題で1票の投票権を有します。AsoUbuyama Nounの票は譲渡できませんが (AsoUbuyama Nounの売却にはそれに応じて票も移ります)、委任することができます。"
 
 #: src/pages/Playground/index.tsx
-msgid "Nouns Protocol"
-msgstr "Nounsプロトコル"
+msgid "AsoUbuyama Nouns Protocol"
+msgstr "AsoUbuyama Nounsプロトコル"
 
 #: src/components/Documentation/index.tsx
 msgid "AsoUbuyama Nouns is a project to support the realization of a sustainable village that the village is challenging under the support of Kumamoto Ubuyama Village. This program is developed by forking Nouns."
@@ -1497,8 +1497,8 @@ msgid "The compressed parts are efficiently converted into a single base64 encod
 msgstr "圧縮されたパーツは、オンチェインで効率よく1つのbase64エンコードされたSVG画像に変換されます。そのために、各パーツは中間フォーマットにデコードされた後、オンチェーンでの文字列連結により一連のSVG rectsに変換されます。SVG全体が生成されると、それはbase64でエンコードされます。"
 
 #: src/pages/Playground/index.tsx
-msgid "The playground was built using the {nounsProtocolLink}. Noun's traits are determined by the Noun Seed. The seed was generated using {nounsAssetsLink} and rendered using the {nounsSDKLink}."
-msgstr "遊び場は{nounsProtocolLink} を使用して作られており、Nounの特徴は、Nounシードによって決まります。{nounsAssetsLink} でシードを生成し、{nounsSDKLink} でレンダリングされています。"
+msgid "The playground was built using the {nounsProtocolLink}. AsoUbuyama Noun's traits are determined by the AsoUbuyama Noun Seed. The seed was generated using {nounsAssetsLink} and rendered using the {nounsSDKLink}."
+msgstr "遊び場は{nounsProtocolLink} を使用して作られており、AsoUbuyama Nounの特徴は、AsoUbuyama Nounシードによって決まります。{nounsAssetsLink} でシードを生成し、{nounsSDKLink} でレンダリングされています。"
 
 #: src/components/Documentation/index.tsx
 #~ msgid "The proposal veto right was initially envisioned as a temporary solution to the problem of ‘51% attacks’ on the Nouns DAO treasury. While Nounders initially believed that a healthy distribution of Nouns would be sufficient protection for the DAO, a more complete understanding of the incentives and risks has led to general consensus within the Nounders, the Nouns Foundation, and the wider community that a more robust game-theoretic solution should be implemented before the right is removed."
@@ -1889,8 +1889,8 @@ msgid "You've already delegated to this address"
 msgstr "あなたはすでにこのアドレスに委任しています"
 
 #: src/pages/Playground/index.tsx
-msgid "You've generated {0} years worth of Nouns"
-msgstr "{0} 年分のNounを生成しました"
+msgid "You've generated {0} years worth of AsoUbuyama Nouns"
+msgstr "{0} 年分のAsoUbuyama Nounを生成しました"
 
 #: src/components/VoteModal/index.tsx
 msgid "You've successfully voted on on prop {0}"

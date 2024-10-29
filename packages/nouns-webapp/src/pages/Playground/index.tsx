@@ -34,7 +34,7 @@ interface PendingCustomTrait {
 
 const nounsProtocolLink = (
   <Link
-    text={<Trans>Nouns Protocol</Trans>}
+    text={<Trans>AsoUbuyama Nouns Protocol</Trans>}
     url="https://www.notion.so/Noun-Protocol-32e4f0bf74fe433e927e2ea35e52a507"
     leavesPage={true}
   />
@@ -270,8 +270,8 @@ const Playground: React.FC = () => {
             </h1>
             <p>
               <Trans>
-                The playground was built using the {nounsProtocolLink}. Noun's traits are determined
-                by the Noun Seed. The seed was generated using {nounsAssetsLink} and rendered using
+                The playground was built using the {nounsProtocolLink}. AsoUbuyama Noun's traits are determined
+                by the AsoUbuyama Noun Seed. The seed was generated using {nounsAssetsLink} and rendered using
                 the {nounsSDKLink}.
               </Trans>
             </p>
@@ -286,7 +286,7 @@ const Playground: React.FC = () => {
                 }}
                 className={classes.primaryBtn}
               >
-                <Trans>Generate Nouns</Trans>
+                <Trans>Generate AsoUbuyama Nouns</Trans>
               </Button>
             </Col>
             <Row>
@@ -376,7 +376,7 @@ const Playground: React.FC = () => {
               <Trans>
                 You've generated{' '}
                 {i18n.number(parseInt(nounSvgs ? (nounSvgs.length / 365).toFixed(2) : '0'))} years
-                worth of Nouns
+                worth of AsoUbuyama Nouns
               </Trans>
             </p>
           </Col>
